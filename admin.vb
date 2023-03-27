@@ -118,33 +118,31 @@ Public Class admin
         Button8.Hide()
 
     End Sub
-
-    Private Sub Guna2Panel1_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles Guna2Panel1.MouseClick
+    Private Sub Panel3_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel3.MouseClick
         Me.Hide()
         Dim adstc = New admin_stocks
         adstc.Show()
     End Sub
 
-    Private Sub Guna2Panel2_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles Guna2Panel2.MouseClick
+    Private Sub Panel4_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel4.MouseClick
         Me.Hide()
         Dim adsls = New admin_sales
         adsls.Show()
     End Sub
 
-    Private Sub Logoutbt_Click(sender As Object, e As EventArgs) Handles Logoutbt.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Hide()
         Dim log = New Start
         log.Show()
 
     End Sub
 
-    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton2.Click
+    Private Sub Button12_Click_1(sender As Object, e As EventArgs) Handles Button12.Click
         Me.Close()
         End
-
     End Sub
 
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim ufb = New User_FB
         ufb.Show()
     End Sub

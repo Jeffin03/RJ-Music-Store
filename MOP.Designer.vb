@@ -24,10 +24,8 @@ Partial Class MOP
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MOP))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.upipanel = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.upil = New System.Windows.Forms.Label()
         Me.upitxt = New System.Windows.Forms.TextBox()
-        Me.cardpanel = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.expdate = New System.Windows.Forms.DateTimePicker()
         Me.crdn = New System.Windows.Forms.Label()
         Me.crdtxt = New System.Windows.Forms.TextBox()
@@ -41,17 +39,19 @@ Partial Class MOP
         Me.X = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.OK = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
-        Me.upipanel.SuspendLayout()
-        Me.cardpanel.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.upipanel)
-        Me.Panel1.Controls.Add(Me.cardpanel)
+        Me.Panel1.Controls.Add(Me.Panel4)
+        Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.UPI)
         Me.Panel1.Controls.Add(Me.Card)
         Me.Panel1.Controls.Add(Me.Cash)
@@ -60,25 +60,12 @@ Partial Class MOP
         Me.Panel1.Size = New System.Drawing.Size(457, 406)
         Me.Panel1.TabIndex = 0
         '
-        'upipanel
-        '
-        Me.upipanel.Controls.Add(Me.upil)
-        Me.upipanel.Controls.Add(Me.upitxt)
-        Me.upipanel.FillColor = System.Drawing.Color.DarkGreen
-        Me.upipanel.FillColor2 = System.Drawing.Color.LightSeaGreen
-        Me.upipanel.FillColor3 = System.Drawing.Color.MediumPurple
-        Me.upipanel.FillColor4 = System.Drawing.Color.DarkCyan
-        Me.upipanel.Location = New System.Drawing.Point(52, 326)
-        Me.upipanel.Name = "upipanel"
-        Me.upipanel.Size = New System.Drawing.Size(349, 60)
-        Me.upipanel.TabIndex = 11
-        '
         'upil
         '
         Me.upil.AutoSize = True
         Me.upil.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.upil.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.upil.Location = New System.Drawing.Point(19, 23)
+        Me.upil.Location = New System.Drawing.Point(25, 18)
         Me.upil.Name = "upil"
         Me.upil.Size = New System.Drawing.Size(61, 22)
         Me.upil.TabIndex = 9
@@ -87,32 +74,15 @@ Partial Class MOP
         'upitxt
         '
         Me.upitxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.upitxt.Location = New System.Drawing.Point(82, 18)
+        Me.upitxt.Location = New System.Drawing.Point(88, 16)
         Me.upitxt.Name = "upitxt"
         Me.upitxt.Size = New System.Drawing.Size(247, 27)
         Me.upitxt.TabIndex = 4
         '
-        'cardpanel
-        '
-        Me.cardpanel.Controls.Add(Me.expdate)
-        Me.cardpanel.Controls.Add(Me.crdn)
-        Me.cardpanel.Controls.Add(Me.crdtxt)
-        Me.cardpanel.Controls.Add(Me.expl)
-        Me.cardpanel.Controls.Add(Me.cvv)
-        Me.cardpanel.Controls.Add(Me.cvvl)
-        Me.cardpanel.FillColor = System.Drawing.Color.DarkGreen
-        Me.cardpanel.FillColor2 = System.Drawing.Color.LightSeaGreen
-        Me.cardpanel.FillColor3 = System.Drawing.Color.MediumPurple
-        Me.cardpanel.FillColor4 = System.Drawing.Color.DarkCyan
-        Me.cardpanel.Location = New System.Drawing.Point(52, 184)
-        Me.cardpanel.Name = "cardpanel"
-        Me.cardpanel.Size = New System.Drawing.Size(349, 76)
-        Me.cardpanel.TabIndex = 10
-        '
         'expdate
         '
         Me.expdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.expdate.Location = New System.Drawing.Point(102, 43)
+        Me.expdate.Location = New System.Drawing.Point(101, 39)
         Me.expdate.Name = "expdate"
         Me.expdate.Size = New System.Drawing.Size(107, 22)
         Me.expdate.TabIndex = 8
@@ -122,7 +92,7 @@ Partial Class MOP
         Me.crdn.AutoSize = True
         Me.crdn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.crdn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.crdn.Location = New System.Drawing.Point(10, 10)
+        Me.crdn.Location = New System.Drawing.Point(9, 6)
         Me.crdn.Name = "crdn"
         Me.crdn.Size = New System.Drawing.Size(78, 20)
         Me.crdn.TabIndex = 6
@@ -131,7 +101,7 @@ Partial Class MOP
         'crdtxt
         '
         Me.crdtxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.crdtxt.Location = New System.Drawing.Point(102, 4)
+        Me.crdtxt.Location = New System.Drawing.Point(101, 0)
         Me.crdtxt.MaxLength = 14
         Me.crdtxt.Name = "crdtxt"
         Me.crdtxt.Size = New System.Drawing.Size(227, 27)
@@ -142,7 +112,7 @@ Partial Class MOP
         Me.expl.AutoSize = True
         Me.expl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.expl.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.expl.Location = New System.Drawing.Point(9, 41)
+        Me.expl.Location = New System.Drawing.Point(8, 37)
         Me.expl.Name = "expl"
         Me.expl.Size = New System.Drawing.Size(87, 25)
         Me.expl.TabIndex = 7
@@ -151,7 +121,7 @@ Partial Class MOP
         'cvv
         '
         Me.cvv.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cvv.Location = New System.Drawing.Point(265, 40)
+        Me.cvv.Location = New System.Drawing.Point(264, 36)
         Me.cvv.MaxLength = 3
         Me.cvv.Name = "cvv"
         Me.cvv.Size = New System.Drawing.Size(64, 27)
@@ -162,7 +132,7 @@ Partial Class MOP
         Me.cvvl.AutoSize = True
         Me.cvvl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cvvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cvvl.Location = New System.Drawing.Point(216, 41)
+        Me.cvvl.Location = New System.Drawing.Point(215, 37)
         Me.cvvl.Name = "cvvl"
         Me.cvvl.Size = New System.Drawing.Size(42, 25)
         Me.cvvl.TabIndex = 5
@@ -251,12 +221,36 @@ Partial Class MOP
         Me.OK.Text = "OK"
         Me.OK.UseVisualStyleBackColor = False
         '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImage = CType(resources.GetObject("Panel3.BackgroundImage"), System.Drawing.Image)
+        Me.Panel3.Controls.Add(Me.expdate)
+        Me.Panel3.Controls.Add(Me.crdtxt)
+        Me.Panel3.Controls.Add(Me.cvvl)
+        Me.Panel3.Controls.Add(Me.crdn)
+        Me.Panel3.Controls.Add(Me.cvv)
+        Me.Panel3.Controls.Add(Me.expl)
+        Me.Panel3.Location = New System.Drawing.Point(53, 185)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(347, 67)
+        Me.Panel3.TabIndex = 12
+        '
+        'Panel4
+        '
+        Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
+        Me.Panel4.Controls.Add(Me.upil)
+        Me.Panel4.Controls.Add(Me.upitxt)
+        Me.Panel4.Location = New System.Drawing.Point(53, 331)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(347, 58)
+        Me.Panel4.TabIndex = 13
+        '
         'MOP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(561, 653)
+        Me.ClientSize = New System.Drawing.Size(561, 768)
         Me.Controls.Add(Me.OK)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -265,12 +259,12 @@ Partial Class MOP
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MOP"
         Me.Panel1.ResumeLayout(False)
-        Me.upipanel.ResumeLayout(False)
-        Me.upipanel.PerformLayout()
-        Me.cardpanel.ResumeLayout(False)
-        Me.cardpanel.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -290,7 +284,7 @@ Partial Class MOP
     Friend WithEvents crdn As Windows.Forms.Label
     Friend WithEvents cvvl As Windows.Forms.Label
     Friend WithEvents upil As Windows.Forms.Label
-    Friend WithEvents upipanel As Guna.UI2.WinForms.Guna2CustomGradientPanel
-    Friend WithEvents cardpanel As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents expdate As Windows.Forms.DateTimePicker
+    Friend WithEvents Panel4 As Windows.Forms.Panel
+    Friend WithEvents Panel3 As Windows.Forms.Panel
 End Class

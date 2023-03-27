@@ -86,14 +86,14 @@ Thank you and please visit again")
 
     End Sub
 
-    Private Sub Logoutbt_Click(sender As Object, e As EventArgs) Handles Logoutbt.Click
+    Private Sub Logoutbt_Click(sender As Object, e As EventArgs) 
         Me.Hide()
         Dim lod = New Start
         lod.Show()
 
     End Sub
 
-    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton2.Click
+    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) 
         Me.Close()
         End
 
@@ -122,7 +122,7 @@ Thank you and please visit again")
 
     End Sub
 
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
+    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) 
         Dim ufb = New User_FB
         ufb.Show()
 

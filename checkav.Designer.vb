@@ -22,9 +22,9 @@ Partial Class Checkav
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Checkav))
         Me.ItemDGV = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.pcat = New System.Windows.Forms.ComboBox()
@@ -36,47 +36,47 @@ Partial Class Checkav
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.searchbtn = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.pronme = New System.Windows.Forms.TextBox()
-        Me.Guna2CustomGradientPanel2 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
-        Me.Guna2GradientButton2 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2GradientButton1 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Logoutbt = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Guna2CustomGradientPanel1.SuspendLayout()
-        Me.Guna2CustomGradientPanel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'ItemDGV
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.ItemDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.ItemDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.ItemDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.ItemDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ItemDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ItemDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.ItemDGV.ColumnHeadersHeight = 25
         Me.ItemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ItemDGV.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ItemDGV.DefaultCellStyle = DataGridViewCellStyle9
         Me.ItemDGV.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemDGV.Location = New System.Drawing.Point(306, 237)
+        Me.ItemDGV.Location = New System.Drawing.Point(306, 235)
         Me.ItemDGV.Name = "ItemDGV"
         Me.ItemDGV.RowHeadersVisible = False
         Me.ItemDGV.RowHeadersWidth = 51
@@ -110,7 +110,7 @@ Partial Class Checkav
         Me.pcat.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pcat.FormattingEnabled = True
         Me.pcat.Items.AddRange(New Object() {"Keyboard", "Guitar", "String", "Wind", "Percussion", "Studio Accessories", "Accessories"})
-        Me.pcat.Location = New System.Drawing.Point(918, 27)
+        Me.pcat.Location = New System.Drawing.Point(902, 19)
         Me.pcat.Name = "pcat"
         Me.pcat.Size = New System.Drawing.Size(230, 37)
         Me.pcat.TabIndex = 144
@@ -225,19 +225,6 @@ Partial Class Checkav
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'Guna2CustomGradientPanel1
-        '
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.searchbtn)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.pronme)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.pcat)
-        Me.Guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Blue
-        Me.Guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.LightBlue
-        Me.Guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.Teal
-        Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(306, 157)
-        Me.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
-        Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(1192, 80)
-        Me.Guna2CustomGradientPanel1.TabIndex = 148
-        '
         'searchbtn
         '
         Me.searchbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -249,7 +236,7 @@ Partial Class Checkav
         Me.searchbtn.FillColor2 = System.Drawing.Color.Cyan
         Me.searchbtn.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.searchbtn.ForeColor = System.Drawing.Color.DimGray
-        Me.searchbtn.Location = New System.Drawing.Point(701, 27)
+        Me.searchbtn.Location = New System.Drawing.Point(685, 19)
         Me.searchbtn.Name = "searchbtn"
         Me.searchbtn.Size = New System.Drawing.Size(125, 37)
         Me.searchbtn.TabIndex = 3
@@ -258,72 +245,10 @@ Partial Class Checkav
         'pronme
         '
         Me.pronme.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pronme.Location = New System.Drawing.Point(343, 30)
+        Me.pronme.Location = New System.Drawing.Point(327, 22)
         Me.pronme.Name = "pronme"
         Me.pronme.Size = New System.Drawing.Size(356, 34)
         Me.pronme.TabIndex = 150
-        '
-        'Guna2CustomGradientPanel2
-        '
-        Me.Guna2CustomGradientPanel2.Controls.Add(Me.Guna2GradientButton2)
-        Me.Guna2CustomGradientPanel2.Controls.Add(Me.Guna2GradientButton1)
-        Me.Guna2CustomGradientPanel2.Controls.Add(Me.Logoutbt)
-        Me.Guna2CustomGradientPanel2.FillColor = System.Drawing.Color.DarkBlue
-        Me.Guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.CornflowerBlue
-        Me.Guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.DodgerBlue
-        Me.Guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.LimeGreen
-        Me.Guna2CustomGradientPanel2.Location = New System.Drawing.Point(247, -3)
-        Me.Guna2CustomGradientPanel2.Name = "Guna2CustomGradientPanel2"
-        Me.Guna2CustomGradientPanel2.Size = New System.Drawing.Size(1294, 57)
-        Me.Guna2CustomGradientPanel2.TabIndex = 149
-        '
-        'Guna2GradientButton2
-        '
-        Me.Guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton2.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Guna2GradientButton2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2GradientButton2.ForeColor = System.Drawing.Color.DimGray
-        Me.Guna2GradientButton2.Location = New System.Drawing.Point(1244, 0)
-        Me.Guna2GradientButton2.Name = "Guna2GradientButton2"
-        Me.Guna2GradientButton2.Size = New System.Drawing.Size(45, 48)
-        Me.Guna2GradientButton2.TabIndex = 2
-        Me.Guna2GradientButton2.Text = "X"
-        '
-        'Guna2GradientButton1
-        '
-        Me.Guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Guna2GradientButton1.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2GradientButton1.ForeColor = System.Drawing.Color.DimGray
-        Me.Guna2GradientButton1.Location = New System.Drawing.Point(879, 3)
-        Me.Guna2GradientButton1.Name = "Guna2GradientButton1"
-        Me.Guna2GradientButton1.Size = New System.Drawing.Size(210, 45)
-        Me.Guna2GradientButton1.TabIndex = 1
-        Me.Guna2GradientButton1.Text = "User Feedback"
-        '
-        'Logoutbt
-        '
-        Me.Logoutbt.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Logoutbt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Logoutbt.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Logoutbt.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Logoutbt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Logoutbt.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Logoutbt.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Logoutbt.ForeColor = System.Drawing.Color.DimGray
-        Me.Logoutbt.Location = New System.Drawing.Point(1102, 3)
-        Me.Logoutbt.Name = "Logoutbt"
-        Me.Logoutbt.Size = New System.Drawing.Size(129, 45)
-        Me.Logoutbt.TabIndex = 0
-        Me.Logoutbt.Text = "Logout"
         '
         'Label5
         '
@@ -336,14 +261,65 @@ Partial Class Checkav
         Me.Label5.TabIndex = 150
         Me.Label5.Text = "Check Availability Of Stock"
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Azure
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Button11)
+        Me.Panel1.Controls.Add(Me.Button12)
+        Me.Panel1.Location = New System.Drawing.Point(247, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1296, 54)
+        Me.Panel1.TabIndex = 151
+        '
+        'Button3
+        '
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(883, 4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(182, 44)
+        Me.Button3.TabIndex = 134
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.Image = CType(resources.GetObject("Button11.Image"), System.Drawing.Image)
+        Me.Button11.Location = New System.Drawing.Point(1085, 4)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(128, 44)
+        Me.Button11.TabIndex = 135
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Button12
+        '
+        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
+        Me.Button12.Location = New System.Drawing.Point(1233, 4)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(47, 44)
+        Me.Button12.TabIndex = 136
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'Panel3
+        '
+        Me.Panel3.BackgroundImage = CType(resources.GetObject("Panel3.BackgroundImage"), System.Drawing.Image)
+        Me.Panel3.Controls.Add(Me.pcat)
+        Me.Panel3.Controls.Add(Me.searchbtn)
+        Me.Panel3.Controls.Add(Me.pronme)
+        Me.Panel3.Location = New System.Drawing.Point(306, 156)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1191, 81)
+        Me.Panel3.TabIndex = 152
+        '
         'Checkav
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1539, 843)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Guna2CustomGradientPanel2)
-        Me.Controls.Add(Me.Guna2CustomGradientPanel1)
         Me.Controls.Add(Me.ItemDGV)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -353,9 +329,9 @@ Partial Class Checkav
         CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Guna2CustomGradientPanel1.ResumeLayout(False)
-        Me.Guna2CustomGradientPanel1.PerformLayout()
-        Me.Guna2CustomGradientPanel2.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -371,12 +347,12 @@ Partial Class Checkav
     Friend WithEvents Button1 As Windows.Forms.Button
     Friend WithEvents PictureBox1 As Windows.Forms.PictureBox
     Friend WithEvents Button9 As Windows.Forms.Button
-    Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents searchbtn As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents pronme As Windows.Forms.TextBox
-    Friend WithEvents Guna2CustomGradientPanel2 As Guna.UI2.WinForms.Guna2CustomGradientPanel
-    Friend WithEvents Guna2GradientButton2 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton1 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Logoutbt As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Label5 As Windows.Forms.Label
+    Friend WithEvents Panel1 As Windows.Forms.Panel
+    Friend WithEvents Button3 As Windows.Forms.Button
+    Friend WithEvents Button11 As Windows.Forms.Button
+    Friend WithEvents Button12 As Windows.Forms.Button
+    Friend WithEvents Panel3 As Windows.Forms.Panel
 End Class

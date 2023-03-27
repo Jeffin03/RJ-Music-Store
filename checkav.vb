@@ -50,16 +50,13 @@ Public Class Checkav
 
     End Sub
 
-    Private Sub Logoutbt_Click(sender As Object, e As EventArgs) Handles Logoutbt.Click
-        Me.Hide()
-        Dim log = New Start
-        log.Show()
+    Private Sub Logoutbt_Click(sender As Object, e As EventArgs)
+
 
     End Sub
 
-    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton2.Click
-        Me.Close()
-        End
+    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs)
+
 
     End Sub
 
@@ -112,11 +109,22 @@ Public Class Checkav
     End Sub
 
     Private Sub searchbtn_Click(sender As Object, e As EventArgs) Handles searchbtn.Click
-        
+
     End Sub
 
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
+    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs)
         Dim ufb = New User_FB
         ufb.Show()
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Me.Close()
+        End
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Me.Hide()
+        Dim log = New Start
+        log.Show()
     End Sub
 End Class

@@ -254,14 +254,9 @@ Public Class register
     Private Sub Ifdeleted()
 
     End Sub
-    Private Sub Logoutbt_Click(sender As Object, e As EventArgs) Handles Logoutbt.Click
-        Me.Hide()
-        Dim log = New Start
-        log.Show()
 
-    End Sub
 
-    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton2.Click
+    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs)
         Me.Close()
         End
 
@@ -295,10 +290,7 @@ Public Class register
 
     End Sub
 
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
-        Dim ufb = New User_FB
-        ufb.Show()
-    End Sub
+
 
     Private Sub moprb_CheckedChanged(sender As Object, e As EventArgs) Handles moprb.CheckedChanged
         Dim mop As New MOP
@@ -353,6 +345,22 @@ Public Class register
 
             End Try
         End If
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Me.Hide()
+        Dim log = New Start
+        log.Show()
+    End Sub
+
+    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim ufb = New User_FB
+        ufb.Show()
+    End Sub
+
+    Private Sub Button12_Click_1(sender As Object, e As EventArgs) Handles Button12.Click
+        Me.Close()
+        End
     End Sub
 
     Private Sub Resetpdt()
