@@ -23,9 +23,7 @@ Partial Class admin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(admin))
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.Button14 = New System.Windows.Forms.Button()
@@ -39,7 +37,6 @@ Partial Class admin
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
-        Me.ItemDGV = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.pcat = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -48,10 +45,11 @@ Partial Class admin
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.ItemDGV = New System.Windows.Forms.DataGridView()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -206,58 +204,6 @@ Partial Class admin
         Me.Guna2Separator1.Size = New System.Drawing.Size(1068, 23)
         Me.Guna2Separator1.TabIndex = 94
         '
-        'ItemDGV
-        '
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.ItemDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ItemDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
-        Me.ItemDGV.ColumnHeadersHeight = 25
-        Me.ItemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ItemDGV.DefaultCellStyle = DataGridViewCellStyle12
-        Me.ItemDGV.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemDGV.Location = New System.Drawing.Point(821, 509)
-        Me.ItemDGV.Name = "ItemDGV"
-        Me.ItemDGV.RowHeadersVisible = False
-        Me.ItemDGV.RowHeadersWidth = 51
-        Me.ItemDGV.RowTemplate.Height = 24
-        Me.ItemDGV.Size = New System.Drawing.Size(442, 239)
-        Me.ItemDGV.TabIndex = 127
-        Me.ItemDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.ItemDGV.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.ItemDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.ItemDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.ItemDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.ItemDGV.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.ItemDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.ItemDGV.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ItemDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.ItemDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.ItemDGV.ThemeStyle.HeaderStyle.Height = 25
-        Me.ItemDGV.ThemeStyle.ReadOnly = False
-        Me.ItemDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.ItemDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.ItemDGV.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ItemDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.ItemDGV.ThemeStyle.RowsStyle.Height = 24
-        Me.ItemDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -336,18 +282,38 @@ Partial Class admin
         Me.Panel4.Size = New System.Drawing.Size(424, 182)
         Me.Panel4.TabIndex = 132
         '
+        'ItemDGV
+        '
+        Me.ItemDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InactiveBorder
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ItemDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.ItemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ItemDGV.GridColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ItemDGV.Location = New System.Drawing.Point(869, 493)
+        Me.ItemDGV.Name = "ItemDGV"
+        Me.ItemDGV.RowHeadersWidth = 51
+        Me.ItemDGV.RowTemplate.Height = 24
+        Me.ItemDGV.Size = New System.Drawing.Size(444, 244)
+        Me.ItemDGV.TabIndex = 135
+        '
         'admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1539, 843)
+        Me.Controls.Add(Me.ItemDGV)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pcat)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.ItemDGV)
         Me.Controls.Add(Me.Guna2Separator1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -359,8 +325,8 @@ Partial Class admin
         Me.Text = "admin"
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -379,7 +345,6 @@ Partial Class admin
     Friend WithEvents Label4 As Windows.Forms.Label
     Friend WithEvents Label5 As Windows.Forms.Label
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
-    Friend WithEvents ItemDGV As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Label6 As Windows.Forms.Label
     Friend WithEvents pcat As Windows.Forms.ComboBox
     Friend WithEvents Panel1 As Windows.Forms.Panel
@@ -388,4 +353,5 @@ Partial Class admin
     Friend WithEvents Button12 As Windows.Forms.Button
     Friend WithEvents Panel3 As Windows.Forms.Panel
     Friend WithEvents Panel4 As Windows.Forms.Panel
+    Friend WithEvents ItemDGV As Windows.Forms.DataGridView
 End Class

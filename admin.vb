@@ -23,13 +23,18 @@ Public Class admin
     End Sub
 
     Dim key = 0
-    Private Sub ItemDGV_CellMouseClick(sender As Object, e As Windows.Forms.DataGridViewCellMouseEventArgs) Handles ItemDGV.CellMouseClick
+    Private Sub ItemDGV_CellMouseClick(sender As Object, e As Windows.Forms.DataGridViewCellMouseEventArgs)
 
     End Sub
 
 
     Private Sub admin_stocks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         displayitem()
+        ItemDGV.Columns(0).Width = 50
+        ItemDGV.Columns(1).Width = 90
+        ItemDGV.Columns(2).Width = 75
+        ItemDGV.Columns(3).Width = 75
+        ItemDGV.Columns(4).Width = 75
 
     End Sub
     Private Sub FilterByCat()
@@ -145,5 +150,9 @@ Public Class admin
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim ufb = New User_FB
         ufb.Show()
+    End Sub
+
+    Private Sub ItemDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
     End Sub
 End Class

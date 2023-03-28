@@ -127,4 +127,35 @@ Thank you and please visit again")
         ufb.Show()
 
     End Sub
+
+    Private Sub ItemDGV_CellContentClick(sender As Object, e As Windows.Forms.DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub ItemDGV_CellContentClick_1(sender As Object, e As Windows.Forms.DataGridViewCellEventArgs) Handles ItemDGV.CellContentClick
+
+    End Sub
+
+    Private Sub repair_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ItemDGV.Columns(0).Width = 100
+        ItemDGV.Columns(1).Width = 240
+        ItemDGV.Columns(2).Width = 243.5
+        ItemDGV.Columns(3).Width = 210
+    End Sub
+
+    Private Sub Button12_Click_1(sender As Object, e As EventArgs) Handles Button12.Click
+        Me.Close()
+        End
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim ufb = New User_FB
+        ufb.Show()
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Me.Hide()
+        Dim lod = New Start
+        lod.Show()
+    End Sub
 End Class

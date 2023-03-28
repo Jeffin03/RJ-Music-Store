@@ -21,6 +21,8 @@ Public Class Checkav
         con.close()
 
     End Sub
+
+
     Private Sub Search()
         con.open()
         Dim query = "select * from producttb with (nolock) where pname ='" & pronme.Text.ToString & "'"
@@ -50,18 +52,12 @@ Public Class Checkav
 
     End Sub
 
-    Private Sub Logoutbt_Click(sender As Object, e As EventArgs)
-
-
-    End Sub
-
-    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs)
-
-
-    End Sub
-
     Private Sub Checkav_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Displayitem()
+        ItemDGV.Columns(1).Width = 250
+        ItemDGV.Columns(2).Width = 180
+        ItemDGV.Columns(3).Width = 140
+        ItemDGV.Columns(4).Width = 150
 
 
     End Sub
@@ -107,24 +103,19 @@ Public Class Checkav
         adm.Show()
 
     End Sub
-
-    Private Sub searchbtn_Click(sender As Object, e As EventArgs) Handles searchbtn.Click
-
-    End Sub
-
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs)
-        Dim ufb = New User_FB
-        ufb.Show()
-    End Sub
-
-    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles closebt.Click
         Me.Close()
         End
     End Sub
 
-    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles logoutbt.Click
         Me.Hide()
         Dim log = New Start
         log.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles userfdbt.Click
+        Dim ufb = New User_FB
+        ufb.Show()
     End Sub
 End Class

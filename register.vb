@@ -219,19 +219,8 @@ Public Class register
 
     Dim Key = 0, Stock = 0
 
-    Private Sub ItemDGV_CellMouseClick(sender As Object, e As Windows.Forms.DataGridViewCellMouseEventArgs) Handles ItemDGV.CellMouseClick
-        Dim row As DataGridViewRow = ItemDGV.Rows(e.RowIndex)
-        pname.Text = row.Cells(1).Value.ToString
-        icat.Text = row.Cells(2).Value.ToString
-        price.Text = row.Cells(4).Value.ToString
-        If pname.Text = "" Then
-            Key = 0
-        Else
-            Key = Convert.ToInt32(row.Cells(0).Value.ToString)
-            Stock = Convert.ToInt32(row.Cells(3).Value.ToString)
+    Private Sub ItemDGV_CellMouseClick(sender As Object, e As Windows.Forms.DataGridViewCellMouseEventArgs)
 
-
-        End If
     End Sub
     Private Sub Updateitem()
         Dim newqty = Stock - Convert.ToInt32(quan.Text)
@@ -363,6 +352,29 @@ Public Class register
         End
     End Sub
 
+    Private Sub ItemDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+
+    End Sub
+
+    Private Sub ItemDGV_CellMouseClick_1(sender As Object, e As DataGridViewCellMouseEventArgs) Handles ItemDGV.CellMouseClick
+        Dim row As DataGridViewRow = ItemDGV.Rows(e.RowIndex)
+        pname.Text = row.Cells(1).Value.ToString
+        icat.Text = row.Cells(2).Value.ToString
+        price.Text = row.Cells(4).Value.ToString
+        If pname.Text = "" Then
+            Key = 0
+        Else
+            Key = Convert.ToInt32(row.Cells(0).Value.ToString)
+            Stock = Convert.ToInt32(row.Cells(3).Value.ToString)
+
+
+        End If
+    End Sub
+
     Private Sub Resetpdt()
         icat.Text = ""
         pname.Text = ""
@@ -377,6 +389,11 @@ Public Class register
         BillDGV.Columns(3).Width = 70
         BillDGV.Columns(4).Width = 70
         Deletebtn.Hide()
+        ItemDGV.Columns(0).Width = 60
+        ItemDGV.Columns(1).Width = 95
+        ItemDGV.Columns(2).Width = 85
+        ItemDGV.Columns(3).Width = 60
+        ItemDGV.Columns(4).Width = 85
 
 
 

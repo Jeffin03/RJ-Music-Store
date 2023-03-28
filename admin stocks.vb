@@ -46,7 +46,7 @@ Public Class admin_stocks
     End Sub
 
     Dim key = 0
-    Private Sub ItemDGV_CellMouseClick(sender As Object, e As Windows.Forms.DataGridViewCellMouseEventArgs) Handles ItemDGV.CellMouseClick
+    Private Sub ItemDGV_CellMouseClick(sender As Object, e As Windows.Forms.DataGridViewCellMouseEventArgs)
         Dim row As DataGridViewRow = ItemDGV.Rows(e.RowIndex)
 
         pname.Text = row.Cells(2).Value.ToString
@@ -78,6 +78,13 @@ Public Class admin_stocks
     End Sub
     Private Sub admin_stocks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         displayitem()
+        ItemDGV.Columns(0).Width = 50
+        ItemDGV.Columns(1).Width = 184.8
+        ItemDGV.Columns(2).Width = 170
+        ItemDGV.Columns(3).Width = 150
+        ItemDGV.Columns(4).Width = 150
+
+
 
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -92,13 +99,6 @@ Public Class admin_stocks
         Dim hm = New Home
         hm.Show()
     End Sub
-
-    Private Sub Button12_Click(sender As Object, e As EventArgs)
-        Me.Close()
-        End
-
-    End Sub
-
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         Me.Hide()
         Dim adm = New admin
@@ -112,21 +112,21 @@ Public Class admin_stocks
         admsls.Show()
 
     End Sub
-    Private Sub Logoutbt_Click(sender As Object, e As EventArgs) Handles Logoutbt.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim ufd = New User_FB
+        ufd.Show()
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Hide()
         Dim log = New Start
         log.Show()
-
     End Sub
 
-    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton2.Click
+    Private Sub Button12_Click_1(sender As Object, e As EventArgs) Handles Button12.Click
         Me.Close()
         End
-
-    End Sub
-
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
-        Dim ufb = New User_FB
-        ufb.Show()
     End Sub
 End Class

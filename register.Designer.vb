@@ -25,8 +25,6 @@ Partial Class register
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(register))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -37,7 +35,6 @@ Partial Class register
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.pcat = New System.Windows.Forms.ComboBox()
-        Me.ItemDGV = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -47,6 +44,9 @@ Partial Class register
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.moprb = New System.Windows.Forms.RadioButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.bdatepd = New System.Windows.Forms.DateTimePicker()
         Me.BillDGV = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -79,17 +79,15 @@ Partial Class register
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Deletebtn = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
+        Me.ItemDGV = New System.Windows.Forms.DataGridView()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.BillDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button2
@@ -225,58 +223,6 @@ Partial Class register
         Me.pcat.Size = New System.Drawing.Size(201, 37)
         Me.pcat.TabIndex = 15
         '
-        'ItemDGV
-        '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.ItemDGV.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ItemDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.ItemDGV.ColumnHeadersHeight = 25
-        Me.ItemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ItemDGV.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ItemDGV.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemDGV.Location = New System.Drawing.Point(251, 522)
-        Me.ItemDGV.Name = "ItemDGV"
-        Me.ItemDGV.RowHeadersVisible = False
-        Me.ItemDGV.RowHeadersWidth = 51
-        Me.ItemDGV.RowTemplate.Height = 24
-        Me.ItemDGV.Size = New System.Drawing.Size(631, 290)
-        Me.ItemDGV.TabIndex = 127
-        Me.ItemDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.ItemDGV.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.ItemDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.ItemDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.ItemDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.ItemDGV.ThemeStyle.BackColor = System.Drawing.Color.White
-        Me.ItemDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.ItemDGV.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ItemDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.ItemDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.ItemDGV.ThemeStyle.HeaderStyle.Height = 25
-        Me.ItemDGV.ThemeStyle.ReadOnly = False
-        Me.ItemDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.ItemDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.ItemDGV.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ItemDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.ItemDGV.ThemeStyle.RowsStyle.Height = 24
-        Me.ItemDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ItemDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -371,6 +317,33 @@ Partial Class register
         Me.Panel1.Size = New System.Drawing.Size(1296, 54)
         Me.Panel1.TabIndex = 1
         '
+        'Button3
+        '
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(883, 4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(182, 44)
+        Me.Button3.TabIndex = 134
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.Image = CType(resources.GetObject("Button11.Image"), System.Drawing.Image)
+        Me.Button11.Location = New System.Drawing.Point(1085, 4)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(128, 44)
+        Me.Button11.TabIndex = 135
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Button12
+        '
+        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
+        Me.Button12.Location = New System.Drawing.Point(1233, 4)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(47, 44)
+        Me.Button12.TabIndex = 136
+        Me.Button12.UseVisualStyleBackColor = True
+        '
         'bdatepd
         '
         Me.bdatepd.Cursor = System.Windows.Forms.Cursors.No
@@ -383,14 +356,14 @@ Partial Class register
         'BillDGV
         '
         Me.BillDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.SlateBlue
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.InactiveBorder
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BillDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InactiveBorder
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BillDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.BillDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BillDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
         Me.BillDGV.GridColor = System.Drawing.SystemColors.ActiveCaptionText
@@ -710,32 +683,25 @@ Partial Class register
         Me.Deletebtn.Text = "DELETE"
         Me.Deletebtn.UseVisualStyleBackColor = False
         '
-        'Button3
+        'ItemDGV
         '
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(883, 4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(182, 44)
-        Me.Button3.TabIndex = 134
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button11
-        '
-        Me.Button11.Image = CType(resources.GetObject("Button11.Image"), System.Drawing.Image)
-        Me.Button11.Location = New System.Drawing.Point(1085, 4)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(128, 44)
-        Me.Button11.TabIndex = 135
-        Me.Button11.UseVisualStyleBackColor = True
-        '
-        'Button12
-        '
-        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
-        Me.Button12.Location = New System.Drawing.Point(1233, 4)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(47, 44)
-        Me.Button12.TabIndex = 136
-        Me.Button12.UseVisualStyleBackColor = True
+        Me.ItemDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InactiveBorder
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ItemDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.ItemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ItemDGV.GridColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ItemDGV.Location = New System.Drawing.Point(270, 525)
+        Me.ItemDGV.Name = "ItemDGV"
+        Me.ItemDGV.RowHeadersWidth = 51
+        Me.ItemDGV.RowTemplate.Height = 24
+        Me.ItemDGV.Size = New System.Drawing.Size(605, 384)
+        Me.ItemDGV.TabIndex = 134
         '
         'register
         '
@@ -744,6 +710,7 @@ Partial Class register
         Me.BackColor = System.Drawing.Color.MintCream
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1539, 843)
+        Me.Controls.Add(Me.ItemDGV)
         Me.Controls.Add(Me.BillDGV)
         Me.Controls.Add(Me.bdatepd)
         Me.Controls.Add(Me.moprb)
@@ -752,7 +719,6 @@ Partial Class register
         Me.Controls.Add(Me.totallb)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ItemDGV)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Button2)
@@ -764,13 +730,13 @@ Partial Class register
         Me.Text = " "
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         CType(Me.BillDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -782,7 +748,6 @@ Partial Class register
     Friend WithEvents Button8 As Windows.Forms.Button
     Friend WithEvents Button7 As Windows.Forms.Button
     Friend WithEvents Button1 As Windows.Forms.Button
-    Friend WithEvents ItemDGV As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents pcat As Windows.Forms.ComboBox
     Friend WithEvents Label2 As Windows.Forms.Label
     Friend WithEvents Panel3 As Windows.Forms.Panel
@@ -831,4 +796,5 @@ Partial Class register
     Friend WithEvents Button3 As Windows.Forms.Button
     Friend WithEvents Button11 As Windows.Forms.Button
     Friend WithEvents Button12 As Windows.Forms.Button
+    Friend WithEvents ItemDGV As Windows.Forms.DataGridView
 End Class
