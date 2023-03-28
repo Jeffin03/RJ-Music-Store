@@ -220,7 +220,7 @@ Public Class register
     End Sub
 
     Dim Key = 0, Stock = 0
-
+    Dim cur_stock = 0
     Private Sub Updateitem()
         Dim newqty = Stock - Convert.ToInt32(quan.Text)
         Try
@@ -230,6 +230,7 @@ Public Class register
             cmd = New SqlCommand(query, con)
             cmd.ExecuteNonQuery()
             con.close()
+
             Displayitem()
 
 
@@ -239,6 +240,9 @@ Public Class register
     End Sub
 
     Private Sub Ifdeleted()
+        'there is one error here.
+        'stock is not supposed to be added to the quantity for the deleted item.
+        'its the current quantity of the item in itemdgv table.
         Dim newqty = Stock + Convert.ToInt32(quan.Text)
         Try
             con.open
@@ -319,6 +323,7 @@ Public Class register
             Updateitem()
             Displayitem()
             Resetpdt()
+
 
         End If
     End Sub
