@@ -7,7 +7,7 @@ Imports System.Drawing.Printing
 'Imports System.IO
 'Imports System.Text
 Imports System.Drawing
-
+Imports System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder
 
 Public Class register
     Dim i = 0, GrdTotal = 0
@@ -184,6 +184,8 @@ Public Class register
         End Try
     End Sub
 
+
+
     Private Sub Displayitem()
         con.open()
         Dim query = "select * from producttb"
@@ -219,9 +221,6 @@ Public Class register
 
     Dim Key = 0, Stock = 0
 
-    Private Sub ItemDGV_CellMouseClick(sender As Object, e As Windows.Forms.DataGridViewCellMouseEventArgs)
-
-    End Sub
     Private Sub Updateitem()
         Dim newqty = Stock - Convert.ToInt32(quan.Text)
         Try
@@ -230,7 +229,6 @@ Public Class register
             Dim cmd As SqlCommand
             cmd = New SqlCommand(query, con)
             cmd.ExecuteNonQuery()
-            MsgBox("item updated successfully")
             con.close()
             Displayitem()
 
@@ -241,14 +239,20 @@ Public Class register
     End Sub
 
     Private Sub Ifdeleted()
+        Dim newqty = Stock + Convert.ToInt32(quan.Text)
+        Try
+            con.open
+            Dim query = " update producttb set quan =" & newqty & " where pid = " & Key & ""
+            Dim cmd As SqlCommand
+            cmd = New SqlCommand(query, con)
+            cmd.ExecuteNonQuery()
+            con.close()
+            Displayitem()
 
-    End Sub
 
+        Catch ex As Exception
 
-    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs)
-        Me.Close()
-        End
-
+        End Try
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -286,7 +290,7 @@ Public Class register
         mop.Show()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Addtocart_Click(sender As Object, e As EventArgs) Handles Addtocart.Click
         If quan.Text = "" Then
             quan.Text = 1
         End If
@@ -319,20 +323,16 @@ Public Class register
         End If
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
 
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Deletebtn.Click
+    Private Sub Deletebtn_Click(sender As Object, e As EventArgs) Handles Deletebtn.Click
         If Key = 0 Then
             MsgBox("select item to delete")
         Else
-            Try
-                con.open
-                Dim query = "delte from "
-            Catch ex As Exception
+            Dim index As Integer
+            index = BillDGV.CurrentCell.RowIndex
+            BillDGV.Rows.RemoveAt(index)
+            Ifdeleted()
 
-            End Try
         End If
     End Sub
 
@@ -375,6 +375,14 @@ Public Class register
         End If
     End Sub
 
+    Private Sub BillDGV_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles BillDGV.CellMouseClick
+        Dim row As DataGridViewRow = BillDGV.Rows(e.RowIndex)
+        pname.Text = row.Cells(1).Value.ToString
+        price.Text = row.Cells(4).Value.ToString
+        quan.Text = row.Cells(2).Value.ToString
+
+    End Sub
+
     Private Sub Resetpdt()
         icat.Text = ""
         pname.Text = ""
@@ -388,7 +396,7 @@ Public Class register
         BillDGV.Columns(2).Width = 70
         BillDGV.Columns(3).Width = 70
         BillDGV.Columns(4).Width = 70
-        Deletebtn.Hide()
+
         ItemDGV.Columns(0).Width = 60
         ItemDGV.Columns(1).Width = 95
         ItemDGV.Columns(2).Width = 85
@@ -398,4 +406,5 @@ Public Class register
 
 
     End Sub
+
 End Class

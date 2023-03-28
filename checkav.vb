@@ -1,10 +1,4 @@
 ﻿Imports System.Data.SqlClient
-Imports System.Security.Cryptography
-Imports System.Web.UI
-Imports System.Windows.Controls
-Imports System.Windows.Forms
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
 Public Class Checkav
     Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
     Private Sub Displayitem()
@@ -25,7 +19,7 @@ Public Class Checkav
 
     Private Sub Search()
         con.open()
-        Dim query = "select * from producttb with (nolock) where pname ='" & pronme.Text.ToString & "'"
+        Dim query = "select * from producttb with (nolock) where pname LIKE '%" & pronme.Text & "%'"
 
         Dim cmd = New SqlCommand(query, con)
         Dim adapter As SqlDataAdapter
