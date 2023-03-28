@@ -47,9 +47,9 @@ Partial Class repair
         Me.itemdes = New System.Windows.Forms.RichTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
+        Me.userfdbtn = New System.Windows.Forms.Button()
+        Me.logoutbtn = New System.Windows.Forms.Button()
+        Me.closebtn = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.ItemDGV = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -340,41 +340,41 @@ Partial Class repair
         '
         Me.Panel1.BackColor = System.Drawing.Color.Azure
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
-        Me.Panel1.Controls.Add(Me.Button4)
-        Me.Panel1.Controls.Add(Me.Button11)
-        Me.Panel1.Controls.Add(Me.Button12)
+        Me.Panel1.Controls.Add(Me.userfdbtn)
+        Me.Panel1.Controls.Add(Me.logoutbtn)
+        Me.Panel1.Controls.Add(Me.closebtn)
         Me.Panel1.Location = New System.Drawing.Point(245, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1296, 54)
         Me.Panel1.TabIndex = 51
         '
-        'Button4
+        'userfdbtn
         '
-        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.Location = New System.Drawing.Point(883, 4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(182, 44)
-        Me.Button4.TabIndex = 134
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.userfdbtn.Image = CType(resources.GetObject("userfdbtn.Image"), System.Drawing.Image)
+        Me.userfdbtn.Location = New System.Drawing.Point(883, 4)
+        Me.userfdbtn.Name = "userfdbtn"
+        Me.userfdbtn.Size = New System.Drawing.Size(182, 44)
+        Me.userfdbtn.TabIndex = 134
+        Me.userfdbtn.UseVisualStyleBackColor = True
         '
-        'Button11
+        'logoutbtn
         '
-        Me.Button11.Image = CType(resources.GetObject("Button11.Image"), System.Drawing.Image)
-        Me.Button11.Location = New System.Drawing.Point(1085, 4)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(128, 44)
-        Me.Button11.TabIndex = 135
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.logoutbtn.Image = CType(resources.GetObject("logoutbtn.Image"), System.Drawing.Image)
+        Me.logoutbtn.Location = New System.Drawing.Point(1085, 4)
+        Me.logoutbtn.Name = "logoutbtn"
+        Me.logoutbtn.Size = New System.Drawing.Size(128, 44)
+        Me.logoutbtn.TabIndex = 135
+        Me.logoutbtn.UseVisualStyleBackColor = True
         '
-        'Button12
+        'closebtn
         '
-        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
-        Me.Button12.Location = New System.Drawing.Point(1233, 4)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(47, 44)
-        Me.Button12.TabIndex = 136
-        Me.Button12.UseVisualStyleBackColor = True
+        Me.closebtn.Image = CType(resources.GetObject("closebtn.Image"), System.Drawing.Image)
+        Me.closebtn.Location = New System.Drawing.Point(1233, 4)
+        Me.closebtn.Name = "closebtn"
+        Me.closebtn.Size = New System.Drawing.Size(47, 44)
+        Me.closebtn.TabIndex = 136
+        Me.closebtn.UseVisualStyleBackColor = True
         '
         'Panel3
         '
@@ -486,9 +486,9 @@ Partial Class repair
     Friend WithEvents checkava As Windows.Forms.Button
     Friend WithEvents Label5 As Windows.Forms.Label
     Friend WithEvents Panel1 As Windows.Forms.Panel
-    Friend WithEvents Button4 As Windows.Forms.Button
-    Friend WithEvents Button11 As Windows.Forms.Button
-    Friend WithEvents Button12 As Windows.Forms.Button
+    Friend WithEvents userfdbtn As Windows.Forms.Button
+    Friend WithEvents logoutbtn As Windows.Forms.Button
+    Friend WithEvents closebtn As Windows.Forms.Button
     Friend WithEvents Panel3 As Windows.Forms.Panel
     Friend WithEvents ItemDGV As Windows.Forms.DataGridView
     Friend WithEvents Column1 As Windows.Forms.DataGridViewTextBoxColumn

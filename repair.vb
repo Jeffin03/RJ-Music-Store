@@ -143,17 +143,17 @@ Thank you and please visit again")
         ItemDGV.Columns(3).Width = 210
     End Sub
 
-    Private Sub Button12_Click_1(sender As Object, e As EventArgs) Handles Button12.Click
+    Private Sub Button12_Click_1(sender As Object, e As EventArgs) Handles closebtn.Click
         Me.Close()
         End
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles userfdbtn.Click
         Dim ufb = New User_FB
         ufb.Show()
     End Sub
 
-    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles logoutbtn.Click
         Me.Hide()
         Dim lod = New Start
         lod.Show()
