@@ -29,7 +29,6 @@ Partial Class admin
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
@@ -60,7 +59,6 @@ Partial Class admin
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(57, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Guna2GradientPanel1)
         Me.Panel2.Controls.Add(Me.Button14)
         Me.Panel2.Controls.Add(Me.Button11)
         Me.Panel2.Controls.Add(Me.Button10)
@@ -75,10 +73,7 @@ Partial Class admin
         '
         'Guna2GradientPanel1
         '
-        Me.Guna2GradientPanel1.Location = New System.Drawing.Point(249, 54)
-        Me.Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Me.Guna2GradientPanel1.Size = New System.Drawing.Size(1281, 61)
-        Me.Guna2GradientPanel1.TabIndex = 95
+
         '
         'Button14
         '
@@ -366,7 +361,6 @@ Partial Class admin
     Friend WithEvents Button14 As Windows.Forms.Button
     Friend WithEvents Button11 As Windows.Forms.Button
     Friend WithEvents Button8 As Windows.Forms.Button
-    Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents Label4 As Windows.Forms.Label
     Friend WithEvents Label5 As Windows.Forms.Label
     Friend WithEvents Label6 As Windows.Forms.Label

@@ -192,7 +192,7 @@ Partial Class repair
         Me.cnum.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cnum.Location = New System.Drawing.Point(175, 85)
         Me.cnum.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.cnum.MaxLength = 12
+        Me.cnum.MaxLength = 10
         Me.cnum.Name = "cnum"
         Me.cnum.Size = New System.Drawing.Size(345, 34)
         Me.cnum.TabIndex = 37

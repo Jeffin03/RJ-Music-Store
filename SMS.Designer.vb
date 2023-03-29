@@ -80,6 +80,7 @@ Partial Class SMS
         '
         Me.cnum.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cnum.Location = New System.Drawing.Point(280, 223)
+        Me.cnum.MaxLength = 10
         Me.cnum.Name = "cnum"
         Me.cnum.Size = New System.Drawing.Size(359, 34)
         Me.cnum.TabIndex = 6
