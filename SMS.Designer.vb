@@ -35,6 +35,7 @@ Partial Class SMS
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SuspendLayout()
         '
         'Label1
@@ -151,6 +152,10 @@ Partial Class SMS
         Me.Panel1.Size = New System.Drawing.Size(810, 73)
         Me.Panel1.TabIndex = 12
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'SMS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -188,4 +193,5 @@ Partial Class SMS
     Friend WithEvents TextBox1 As Windows.Forms.TextBox
     Friend WithEvents Label5 As Windows.Forms.Label
     Friend WithEvents Panel1 As Windows.Forms.Panel
+    Friend WithEvents OpenFileDialog1 As Windows.Forms.OpenFileDialog
 End Class

@@ -121,7 +121,7 @@
   <data name="Panel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAVgAAABICAYAAACzze1vAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        cwAAEnMBjCK5BwAAJthJREFUeF7t1Pe2LUdh4OHzEhgwYmQsGYPBwAwasGXCyGDkRzBIuvHksHPOOedw
+        cgAAEnIBXmVb4wAAJthJREFUeF7t1Pe2LUdh4OHzEhgwYmQsGYPBwAwasGXCyGDkRzBIuvHksHPOOedw
         crhREsxD9lS5VXR11a/33mhm+Z61Rn98r/Bt/fvhifPvRyEQDhABURADcZBwHeuSIAXStpMMyIIcyLtC
         ugIogpItXAYVUAU1V0RXBw3Q9ItKLdAGHdB1xXQ90AcDv7g0NIzAGEw8CWUKZmBuSy7AEpyCM09KOQcX
         4NKWvgLX4AbcejLKHXgGntuyL8BL8Aq89uR0n4LPAnzuyev+GOBP4H/fC1sfHp04nhAIgwiI+h0rMRAH
@@ -290,4 +290,7 @@
         rvxqLAHaAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
