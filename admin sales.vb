@@ -1,6 +1,4 @@
-﻿Imports LiveCharts
-Imports LiveCharts.Defaults
-Imports LiveCharts.Wpf
+﻿
 
 Public Class admin_sales
 
