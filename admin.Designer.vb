@@ -24,6 +24,10 @@ Partial Class admin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(admin))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.Button14 = New System.Windows.Forms.Button()
@@ -33,10 +37,8 @@ Partial Class admin
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CartesianChart1 = New LiveCharts.WinForms.CartesianChart()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.pcat = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -46,10 +48,13 @@ Partial Class admin
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.ItemDGV = New System.Windows.Forms.DataGridView()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -165,14 +170,6 @@ Partial Class admin
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'CartesianChart1
-        '
-        Me.CartesianChart1.Location = New System.Drawing.Point(277, 486)
-        Me.CartesianChart1.Name = "CartesianChart1"
-        Me.CartesianChart1.Size = New System.Drawing.Size(493, 271)
-        Me.CartesianChart1.TabIndex = 90
-        Me.CartesianChart1.Text = "CartesianChart1"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -195,21 +192,12 @@ Partial Class admin
         Me.Label5.TabIndex = 77
         Me.Label5.Text = "Dashboard"
         '
-        'Guna2Separator1
-        '
-        Me.Guna2Separator1.FillColor = System.Drawing.Color.Silver
-        Me.Guna2Separator1.FillThickness = 5
-        Me.Guna2Separator1.Location = New System.Drawing.Point(340, 324)
-        Me.Guna2Separator1.Name = "Guna2Separator1"
-        Me.Guna2Separator1.Size = New System.Drawing.Size(1068, 23)
-        Me.Guna2Separator1.TabIndex = 94
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Mongolian Baiti", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label6.Location = New System.Drawing.Point(816, 453)
+        Me.Label6.Location = New System.Drawing.Point(970, 453)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(234, 30)
         Me.Label6.TabIndex = 128
@@ -220,9 +208,9 @@ Partial Class admin
         Me.pcat.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pcat.FormattingEnabled = True
         Me.pcat.Items.AddRange(New Object() {"Keyboard", "Guitar", "String", "Wind", "Percussion", "Studio Accessories", "Accessories"})
-        Me.pcat.Location = New System.Drawing.Point(1118, 450)
+        Me.pcat.Location = New System.Drawing.Point(1256, 450)
         Me.pcat.Name = "pcat"
-        Me.pcat.Size = New System.Drawing.Size(143, 37)
+        Me.pcat.Size = New System.Drawing.Size(188, 37)
         Me.pcat.TabIndex = 129
         Me.pcat.Text = "Filter"
         '
@@ -295,12 +283,49 @@ Partial Class admin
         Me.ItemDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.ItemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ItemDGV.GridColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ItemDGV.Location = New System.Drawing.Point(869, 493)
+        Me.ItemDGV.Location = New System.Drawing.Point(986, 493)
         Me.ItemDGV.Name = "ItemDGV"
         Me.ItemDGV.RowHeadersWidth = 51
         Me.ItemDGV.RowTemplate.Height = 24
-        Me.ItemDGV.Size = New System.Drawing.Size(444, 244)
+        Me.ItemDGV.Size = New System.Drawing.Size(511, 244)
         Me.ItemDGV.TabIndex = 135
+        '
+        'Chart1
+        '
+        Me.Chart1.BackColor = System.Drawing.Color.LightCyan
+        Me.Chart1.BackImage = "C:\Users\santhosh\Pictures\Screenshots\Screenshot 2023-03-28 005458.png"
+        Me.Chart1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
+        Me.Chart1.Location = New System.Drawing.Point(279, 493)
+        Me.Chart1.Name = "Chart1"
+        Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Range
+        Series1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series1.Legend = "Legend1"
+        Series1.Name = "Sales Rating"
+        Series1.ShadowColor = System.Drawing.Color.MediumSeaGreen
+        Series1.YValuesPerPoint = 2
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Size = New System.Drawing.Size(636, 244)
+        Me.Chart1.TabIndex = 136
+        Me.Chart1.Text = "Chart1"
+        Title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft
+        Title1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Left
+        Title1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Title1.Name = "Sales (amount) in Rupees"
+        Me.Chart1.Titles.Add(Title1)
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.Panel5.Location = New System.Drawing.Point(350, 336)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(997, 10)
+        Me.Panel5.TabIndex = 137
         '
         'admin
         '
@@ -308,16 +333,16 @@ Partial Class admin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1539, 843)
+        Me.Controls.Add(Me.Panel5)
+        Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.ItemDGV)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pcat)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Guna2Separator1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.CartesianChart1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "admin"
@@ -327,6 +352,7 @@ Partial Class admin
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         CType(Me.ItemDGV, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -340,11 +366,9 @@ Partial Class admin
     Friend WithEvents Button14 As Windows.Forms.Button
     Friend WithEvents Button11 As Windows.Forms.Button
     Friend WithEvents Button8 As Windows.Forms.Button
-    Friend WithEvents CartesianChart1 As LiveCharts.WinForms.CartesianChart
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents Label4 As Windows.Forms.Label
     Friend WithEvents Label5 As Windows.Forms.Label
-    Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Label6 As Windows.Forms.Label
     Friend WithEvents pcat As Windows.Forms.ComboBox
     Friend WithEvents Panel1 As Windows.Forms.Panel
@@ -354,4 +378,6 @@ Partial Class admin
     Friend WithEvents Panel3 As Windows.Forms.Panel
     Friend WithEvents Panel4 As Windows.Forms.Panel
     Friend WithEvents ItemDGV As Windows.Forms.DataGridView
+    Friend WithEvents Chart1 As Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents Panel5 As Windows.Forms.Panel
 End Class

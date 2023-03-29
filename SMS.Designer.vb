@@ -22,7 +22,7 @@ Partial Class SMS
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SMS))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.apino = New System.Windows.Forms.TextBox()
         Me.sndnm = New System.Windows.Forms.TextBox()
@@ -34,18 +34,8 @@ Partial Class SMS
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
-        '
-        'Guna2CustomGradientPanel1
-        '
-        Me.Guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Turquoise
-        Me.Guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.MediumTurquoise
-        Me.Guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.ForestGreen
-        Me.Guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.DarkCyan
-        Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(-3, 0)
-        Me.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
-        Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(805, 67)
-        Me.Guna2CustomGradientPanel1.TabIndex = 0
         '
         'Label1
         '
@@ -152,11 +142,21 @@ Partial Class SMS
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Ref ID"
         '
+        'Panel1
+        '
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Location = New System.Drawing.Point(-6, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(810, 73)
+        Me.Panel1.TabIndex = 12
+        '
         'SMS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 477)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
@@ -168,7 +168,6 @@ Partial Class SMS
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.apino)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Guna2CustomGradientPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SMS"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -177,8 +176,6 @@ Partial Class SMS
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents Label1 As Windows.Forms.Label
     Friend WithEvents apino As Windows.Forms.TextBox
     Friend WithEvents sndnm As Windows.Forms.TextBox
@@ -190,4 +187,5 @@ Partial Class SMS
     Friend WithEvents Button1 As Windows.Forms.Button
     Friend WithEvents TextBox1 As Windows.Forms.TextBox
     Friend WithEvents Label5 As Windows.Forms.Label
+    Friend WithEvents Panel1 As Windows.Forms.Panel
 End Class

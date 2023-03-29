@@ -1,10 +1,8 @@
-﻿Imports LiveCharts
-Imports LiveCharts.Defaults
-Imports LiveCharts.Wpf
-Imports System.Data.SqlClient
-Imports System.Security.Cryptography
-Imports System.Windows.Controls
+﻿Imports System.Data.SqlClient
+Imports System.Drawing
 Imports System.Windows.Forms
+Imports System.Windows.Forms.DataVisualization.Charting
+
 Public Class admin
     Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
     Private Sub displayitem()
@@ -26,10 +24,42 @@ Public Class admin
     Private Sub ItemDGV_CellMouseClick(sender As Object, e As Windows.Forms.DataGridViewCellMouseEventArgs)
 
     End Sub
+    Private Sub Sales_chart()
+        Try
+            con.open
+            Dim query As String
+            query = "select * from salestb"
+            Dim cmd = New SqlCommand(query, con)
+            Dim reader = cmd.ExecuteReader
+            Dim dt = New DataTable
+            dt.Load(reader)
 
+            Chart1.Series("Sales Rating").XValueMember = "bdate"
+            Chart1.Series("Sales Rating").YValueMembers = "netamt"
+            Chart1.DataSource = dt
+            Chart1.DataBind()
+            Chart1.ChartAreas(0).AxisX.Title = "Date of Purchase---------->"
+            Chart1.ChartAreas(0).AxisX.TitleAlignment = StringAlignment.Near
+            Chart1.ChartAreas(0).AxisX.TextOrientation = TextOrientation.Horizontal
+            Chart1.ChartAreas(0).AxisX.TitleFont = New Font("Times New Roman", 12, FontStyle.Bold)
+            Chart1.ChartAreas(0).AxisY.TitleFont = New Font("Times New Roman", 12, FontStyle.Bold)
+            Chart1.ChartAreas(0).AxisY.Title = "Sales (amount) in Rupees--->"
+            Chart1.ChartAreas(0).AxisY.TitleAlignment = StringAlignment.Near
+            Chart1.ChartAreas(0).AxisY.TextOrientation = TextOrientation.Rotated270
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            con.close
+
+        End Try
+    End Sub
 
     Private Sub admin_stocks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         displayitem()
+
+
         ItemDGV.Columns(0).Width = 50
         ItemDGV.Columns(1).Width = 90
         ItemDGV.Columns(2).Width = 75
@@ -55,40 +85,7 @@ Public Class admin
         FilterByCat()
 
     End Sub
-    Private Sub Chart()
-        CartesianChart1.Series = New SeriesCollection From {
-            New LineSeries With {
-            .Values = New ChartValues(Of ObservablePoint) From {
-            New ObservablePoint(0, 10),
-            New ObservablePoint(4, 7),
-            New ObservablePoint(5, 3),
-            New ObservablePoint(7, 6),
-            New ObservablePoint(10, 8)
-            },
-            .PointGeometrySize = 25
-            },
-            New LineSeries With {
-            .Values = New ChartValues(Of ObservablePoint) From {
-            New ObservablePoint(0, 2),
-            New ObservablePoint(2, 5),
-            New ObservablePoint(3, 6),
-            New ObservablePoint(6, 8),
-            New ObservablePoint(10, 5)
-        },
-        .PointGeometrySize = 15
-        },
-          New LineSeries With {
-            .Values = New ChartValues(Of ObservablePoint) From {
-            New ObservablePoint(0, 4),
-            New ObservablePoint(5, 5),
-            New ObservablePoint(7, 7),
-            New ObservablePoint(9, 10),
-            New ObservablePoint(10, 9)
-        },
-        .PointGeometrySize = 15
-     }
- }
-    End Sub
+
     Private Sub Button12_Click(sender As Object, e As EventArgs)
         Me.Close()
         End
@@ -118,7 +115,7 @@ Public Class admin
     End Sub
 
     Private Sub admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Chart()
+        Sales_chart()
         Button11.Hide()
         Button8.Hide()
 
