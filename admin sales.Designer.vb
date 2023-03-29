@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class admin_sales
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,13 @@ Partial Class admin_sales
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(admin_sales))
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
@@ -33,8 +37,15 @@ Partial Class admin_sales
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.userfdbt = New System.Windows.Forms.Button()
+        Me.logoutbt = New System.Windows.Forms.Button()
+        Me.closebt = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -155,16 +166,87 @@ Partial Class admin_sales
         'DateTimePicker1
         '
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(1261, 97)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(1250, 67)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 30)
         Me.DateTimePicker1.TabIndex = 92
+        '
+        'Chart1
+        '
+        Me.Chart1.BackColor = System.Drawing.Color.LightCyan
+        Me.Chart1.BackImage = "C:\Users\santhosh\Pictures\Screenshots\Screenshot 2023-03-28 005458.png"
+        Me.Chart1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
+        Me.Chart1.Location = New System.Drawing.Point(303, 167)
+        Me.Chart1.Name = "Chart1"
+        Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Range
+        Series1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series1.Legend = "Legend1"
+        Series1.Name = "Sales Rating"
+        Series1.ShadowColor = System.Drawing.Color.MediumSeaGreen
+        Series1.YValuesPerPoint = 2
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Size = New System.Drawing.Size(1131, 471)
+        Me.Chart1.TabIndex = 93
+        Me.Chart1.Text = "Chart1"
+        Title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft
+        Title1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Left
+        Title1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Title1.Name = "Sales (amount) in Rupees"
+        Me.Chart1.Titles.Add(Title1)
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Azure
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.Controls.Add(Me.userfdbt)
+        Me.Panel1.Controls.Add(Me.logoutbt)
+        Me.Panel1.Controls.Add(Me.closebt)
+        Me.Panel1.Location = New System.Drawing.Point(240, -2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1296, 54)
+        Me.Panel1.TabIndex = 152
+        '
+        'userfdbt
+        '
+        Me.userfdbt.Image = CType(resources.GetObject("userfdbt.Image"), System.Drawing.Image)
+        Me.userfdbt.Location = New System.Drawing.Point(883, 4)
+        Me.userfdbt.Name = "userfdbt"
+        Me.userfdbt.Size = New System.Drawing.Size(182, 44)
+        Me.userfdbt.TabIndex = 134
+        Me.userfdbt.UseVisualStyleBackColor = True
+        '
+        'logoutbt
+        '
+        Me.logoutbt.Image = CType(resources.GetObject("logoutbt.Image"), System.Drawing.Image)
+        Me.logoutbt.Location = New System.Drawing.Point(1085, 4)
+        Me.logoutbt.Name = "logoutbt"
+        Me.logoutbt.Size = New System.Drawing.Size(128, 44)
+        Me.logoutbt.TabIndex = 135
+        Me.logoutbt.UseVisualStyleBackColor = True
+        '
+        'closebt
+        '
+        Me.closebt.Image = CType(resources.GetObject("closebt.Image"), System.Drawing.Image)
+        Me.closebt.Location = New System.Drawing.Point(1233, 4)
+        Me.closebt.Name = "closebt"
+        Me.closebt.Size = New System.Drawing.Size(47, 44)
+        Me.closebt.TabIndex = 136
+        Me.closebt.UseVisualStyleBackColor = True
         '
         'admin_sales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1539, 843)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -175,6 +257,8 @@ Partial Class admin_sales
         Me.Text = "admin_sales"
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -189,4 +273,9 @@ Partial Class admin_sales
     Friend WithEvents Label1 As Windows.Forms.Label
     Friend WithEvents Label2 As Windows.Forms.Label
     Friend WithEvents DateTimePicker1 As Windows.Forms.DateTimePicker
+    Friend WithEvents Chart1 As Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents Panel1 As Windows.Forms.Panel
+    Friend WithEvents userfdbt As Windows.Forms.Button
+    Friend WithEvents logoutbt As Windows.Forms.Button
+    Friend WithEvents closebt As Windows.Forms.Button
 End Class
