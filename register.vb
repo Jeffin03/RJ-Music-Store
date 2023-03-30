@@ -240,13 +240,12 @@ Public Class register
     End Sub
 
     Private Sub Ifdeleted()
-        'there is one error here.
-        'stock is not supposed to be added to the quantity for the deleted item.
-        'its the current quantity of the item in itemdgv table.
-        Dim newqty = Stock + Convert.ToInt32(quan.Text)
+
+        Dim newqty = Stock - Convert.ToInt32(quan.Text)
+        Dim curqty = newqty + Convert.ToInt32(quan.Text)
         Try
             con.open
-            Dim query = " update producttb set quan =" & newqty & " where pid = " & Key & ""
+            Dim query = " update producttb set quan =" & curqty & " where pid = " & Key & ""
             Dim cmd As SqlCommand
             cmd = New SqlCommand(query, con)
             cmd.ExecuteNonQuery()
