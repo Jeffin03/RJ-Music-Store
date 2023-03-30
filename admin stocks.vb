@@ -45,13 +45,12 @@ Public Class admin_stocks
 
     End Sub
 
-    Dim key = 0
+    Dim key = 0, stock = 0
+
     Private Sub ItemDGV_CellMouseClick(sender As Object, e As Windows.Forms.DataGridViewCellMouseEventArgs)
         Dim row As DataGridViewRow = ItemDGV.Rows(e.RowIndex)
 
         pname.Text = row.Cells(2).Value.ToString
-        'pcat.SelectedIndex = row.Cells(3).Value.ToString
-        'price.Text = row.Cells(4).Value.ToString
         quan.Text = row.Cells(4).Value.ToString
 
 
@@ -76,6 +75,22 @@ Public Class admin_stocks
         FilterByCat()
 
     End Sub
+
+    Private Sub ItemDGV_CellMouseClick_1(sender As Object, e As DataGridViewCellMouseEventArgs) Handles ItemDGV.CellMouseClick
+        Dim row As DataGridViewRow = ItemDGV.Rows(e.RowIndex)
+        pname.Text = row.Cells(1).Value.ToString
+        pcat.Text = row.Cells(2).Value.ToString
+        price.Text = row.Cells(4).Value.ToString
+        quan.Text = row.Cells(3).Value.ToString
+        If pname.Text = "" Then
+            key = 0
+        Else
+            key = Convert.ToInt32(row.Cells(0).Value.ToString)
+            Stock = Convert.ToInt32(row.Cells(3).Value.ToString)
+        End If
+
+    End Sub
+
     Private Sub admin_stocks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         displayitem()
         ItemDGV.Columns(0).Width = 50
@@ -128,5 +143,54 @@ Public Class admin_stocks
     Private Sub Button12_Click_1(sender As Object, e As EventArgs) Handles Button12.Click
         Me.Close()
         End
+    End Sub
+    Private Sub Updateitem()
+        Dim newqty = stock + Convert.ToInt32(quan.Text)
+        Try
+            con.open
+            Dim query = " update producttb set quan =" & newqty & " where pid = " & key & ""
+            Dim cmd As SqlCommand
+            cmd = New SqlCommand(query, con)
+            cmd.ExecuteNonQuery()
+            con.close()
+
+            displayitem()
+
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Delete_Click(sender As Object, e As EventArgs) Handles Delete.Click
+        If pname.Text = "" Or pcat.Text = "" Or quan.Text = "" Or price.Text = "" Then
+            MsgBox("Select item to delete")
+        Else
+            Try
+                con.open
+                Dim query = "delete from producttb where pid = " & key & ""
+                Dim cmd As SqlCommand
+                cmd = New SqlCommand(query, con)
+                cmd.ExecuteNonQuery()
+                con.close
+                displayitem()
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+
+            End Try
+        End If
+    End Sub
+
+    Private Sub Updatebtn_Click(sender As Object, e As EventArgs) Handles Updatebtn.Click
+        If quan.Text = "" Then
+            MsgBox("Enter the quantity")
+        Else
+            Updateitem()
+
+        End If
+
+        displayitem()
+
     End Sub
 End Class

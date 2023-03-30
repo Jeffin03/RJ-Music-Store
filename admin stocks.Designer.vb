@@ -48,8 +48,10 @@ Partial Class admin_stocks
         Me.clear = New System.Windows.Forms.Button()
         Me.save = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Updatebtn = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.ItemDGV = New System.Windows.Forms.DataGridView()
+        Me.Delete = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -315,7 +317,7 @@ Partial Class admin_stocks
         Me.clear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.clear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.clear.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.clear.Location = New System.Drawing.Point(210, 21)
+        Me.clear.Location = New System.Drawing.Point(375, 19)
         Me.clear.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.clear.Name = "clear"
         Me.clear.Size = New System.Drawing.Size(151, 38)
@@ -329,7 +331,7 @@ Partial Class admin_stocks
         Me.save.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.save.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.save.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.save.Location = New System.Drawing.Point(40, 22)
+        Me.save.Location = New System.Drawing.Point(54, 20)
         Me.save.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.save.Name = "save"
         Me.save.Size = New System.Drawing.Size(145, 38)
@@ -340,12 +342,29 @@ Partial Class admin_stocks
         'Panel4
         '
         Me.Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), System.Drawing.Image)
+        Me.Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel4.Controls.Add(Me.Delete)
+        Me.Panel4.Controls.Add(Me.Updatebtn)
         Me.Panel4.Controls.Add(Me.save)
         Me.Panel4.Controls.Add(Me.clear)
-        Me.Panel4.Location = New System.Drawing.Point(310, 136)
+        Me.Panel4.Location = New System.Drawing.Point(172, 143)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(392, 67)
+        Me.Panel4.Size = New System.Drawing.Size(703, 67)
         Me.Panel4.TabIndex = 0
+        '
+        'Updatebtn
+        '
+        Me.Updatebtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(57, Byte), Integer))
+        Me.Updatebtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Updatebtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Updatebtn.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.Updatebtn.Location = New System.Drawing.Point(216, 20)
+        Me.Updatebtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Updatebtn.Name = "Updatebtn"
+        Me.Updatebtn.Size = New System.Drawing.Size(145, 38)
+        Me.Updatebtn.TabIndex = 125
+        Me.Updatebtn.Text = "UPDATE"
+        Me.Updatebtn.UseVisualStyleBackColor = False
         '
         'Panel5
         '
@@ -367,6 +386,20 @@ Partial Class admin_stocks
         Me.ItemDGV.RowTemplate.Height = 24
         Me.ItemDGV.Size = New System.Drawing.Size(1034, 346)
         Me.ItemDGV.TabIndex = 154
+        '
+        'Delete
+        '
+        Me.Delete.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(57, Byte), Integer))
+        Me.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Delete.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.Delete.Location = New System.Drawing.Point(541, 19)
+        Me.Delete.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Delete.Name = "Delete"
+        Me.Delete.Size = New System.Drawing.Size(145, 38)
+        Me.Delete.TabIndex = 126
+        Me.Delete.Text = "DELETE"
+        Me.Delete.UseVisualStyleBackColor = False
         '
         'admin_stocks
         '
@@ -420,4 +453,6 @@ Partial Class admin_stocks
     Friend WithEvents Panel4 As Windows.Forms.Panel
     Friend WithEvents Panel5 As Windows.Forms.Panel
     Friend WithEvents ItemDGV As Windows.Forms.DataGridView
+    Friend WithEvents Updatebtn As Windows.Forms.Button
+    Friend WithEvents Delete As Windows.Forms.Button
 End Class

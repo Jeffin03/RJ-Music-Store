@@ -1,5 +1,8 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Web.UI
 Imports System.Windows.Controls
+Imports System.Windows.Forms
+Imports System.Windows.Input
 
 Public Class repair
     Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
@@ -86,14 +89,13 @@ Thank you and please visit again")
 
     End Sub
 
-    Private Sub Logoutbt_Click(sender As Object, e As EventArgs) 
+    Private Sub Logoutbt_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim lod = New Start
         lod.Show()
-
     End Sub
 
-    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) 
+    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs)
         Me.Close()
         End
 
@@ -119,10 +121,9 @@ Thank you and please visit again")
         itmcat.Text = ""
         ordnme.Text = ""
         cnum.Text = ""
-
     End Sub
 
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) 
+    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs)
         Dim ufb = New User_FB
         ufb.Show()
 

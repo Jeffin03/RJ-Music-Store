@@ -1,4 +1,7 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Windows.Controls
+Imports System.Windows.Forms
+
 Public Class Checkav
     Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
     Private Sub Displayitem()

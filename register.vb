@@ -7,7 +7,7 @@ Imports System.Drawing.Printing
 'Imports System.IO
 'Imports System.Text
 Imports System.Drawing
-Imports System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder
+
 
 Public Class register
     Dim i = 0, GrdTotal = 0
@@ -149,9 +149,9 @@ Public Class register
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-        If cnametb.Text = "" Then
+        If cnametb.Text = "" Or cnum.Text = "" Or cadr.Text = "" Or custid.Text = "" Then
 
-            MsgBox("enter name")
+            MsgBox("Enter Customer Details")
 
         Else
             Bill_Gen()
