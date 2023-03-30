@@ -91,7 +91,7 @@ Public Class register
         Try
 
             con.Open()
-            Dim query = "insert into salestb values('" & billtb.Text & "' ,'" & client.Text & " '," & GrdTotal & ",'" & DateTime.Now.ToLongDateString & "')"
+            Dim query = "insert into salestb values('" & billtb.Text & "' ,'" & cnametb.Text & " '," & GrdTotal & ",'" & DateTime.Now.ToLongDateString & "')"
             Dim cmd As SqlCommand
             cmd = New SqlCommand(query, con)
             cmd.ExecuteNonQuery()
@@ -163,6 +163,10 @@ Public Class register
             addcust()
             PDD.Document = PD
             PDD.ShowDialog()
+            Clear_after_billing()
+
+
+
         Else
             MsgBox("select mode of payment")
         End If
@@ -279,7 +283,7 @@ Public Class register
         billtb.Text = ""
         icat.Text = ""
         pname.Text = ""
-        client.Text = ""
+
         price.Text = ""
         quan.Text = ""
 
@@ -356,14 +360,6 @@ Public Class register
         End
     End Sub
 
-    Private Sub ItemDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
-
-    End Sub
-
     Private Sub ItemDGV_CellMouseClick_1(sender As Object, e As DataGridViewCellMouseEventArgs) Handles ItemDGV.CellMouseClick
         Dim row As DataGridViewRow = ItemDGV.Rows(e.RowIndex)
         pname.Text = row.Cells(1).Value.ToString
@@ -392,10 +388,25 @@ Public Class register
         pname.Text = ""
         price.Text = ""
     End Sub
+    Private Sub Clear_after_billing()
+        BillDGV.Rows.Clear()
+        cnametb.Text = ""
+        cnum.Text = ""
+        cadr.Text = ""
+        custid.Text = ""
+        billtb.Text = ""
+        icat.Text = ""
+        pname.Text = ""
+        price.Text = ""
+        quan.Text = ""
+    End Sub
 
     Private Sub register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Displayitem()
         sndsms.Hide()
+
+
+
         BillDGV.Columns(1).Width = 90
         BillDGV.Columns(2).Width = 70
         BillDGV.Columns(3).Width = 70

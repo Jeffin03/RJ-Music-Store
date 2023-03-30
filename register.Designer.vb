@@ -69,9 +69,7 @@ Partial Class register
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Addtocart = New System.Windows.Forms.Button()
-        Me.client = New System.Windows.Forms.TextBox()
         Me.cnum = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.custid = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -561,15 +559,6 @@ Partial Class register
         Me.Addtocart.Text = "ADD TO CART"
         Me.Addtocart.UseVisualStyleBackColor = False
         '
-        'client
-        '
-        Me.client.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.client.Location = New System.Drawing.Point(591, 93)
-        Me.client.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.client.Name = "client"
-        Me.client.Size = New System.Drawing.Size(161, 34)
-        Me.client.TabIndex = 122
-        '
         'cnum
         '
         Me.cnum.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -579,16 +568,6 @@ Partial Class register
         Me.cnum.Name = "cnum"
         Me.cnum.Size = New System.Drawing.Size(210, 34)
         Me.cnum.TabIndex = 11
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(589, 58)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(128, 27)
-        Me.Label10.TabIndex = 123
-        Me.Label10.Text = "Client Name"
         '
         'Label11
         '
@@ -645,9 +624,7 @@ Partial Class register
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.custid)
         Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.cnum)
-        Me.GroupBox2.Controls.Add(Me.client)
         Me.GroupBox2.Controls.Add(Me.Addtocart)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label1)
@@ -783,9 +760,7 @@ Partial Class register
     Friend WithEvents Label1 As Windows.Forms.Label
     Friend WithEvents Label3 As Windows.Forms.Label
     Friend WithEvents Addtocart As Windows.Forms.Button
-    Friend WithEvents client As Windows.Forms.TextBox
     Friend WithEvents cnum As Windows.Forms.TextBox
-    Friend WithEvents Label10 As Windows.Forms.Label
     Friend WithEvents Label11 As Windows.Forms.Label
     Friend WithEvents custid As Windows.Forms.TextBox
     Friend WithEvents Label7 As Windows.Forms.Label
