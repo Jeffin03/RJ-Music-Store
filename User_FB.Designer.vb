@@ -85,6 +85,7 @@ Partial Class User_FB
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "User_FB"
+        Me.Opacity = 0.95R
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "User_FB"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

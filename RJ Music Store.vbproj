@@ -7,7 +7,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0169770E-A679-452C-A083-3D5CFA9F9900}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>RJ_Music_Store.Splash</StartupObject>
+    <StartupObject>RJ_Music_Store.User_FB</StartupObject>
     <RootNamespace>RJ_Music_Store</RootNamespace>
     <AssemblyName>RJ Music Store</AssemblyName>
     <FileAlignment>512</FileAlignment>
