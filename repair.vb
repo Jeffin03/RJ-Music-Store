@@ -21,8 +21,6 @@ Public Class repair
 
     End Sub
 
-
-
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         Me.Hide()
         Dim adm = New adminlog
@@ -126,14 +124,6 @@ Thank you and please visit again")
     Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs)
         Dim ufb = New User_FB
         ufb.Show()
-
-    End Sub
-
-    Private Sub ItemDGV_CellContentClick(sender As Object, e As Windows.Forms.DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub ItemDGV_CellContentClick_1(sender As Object, e As Windows.Forms.DataGridViewCellEventArgs) Handles ItemDGV.CellContentClick
 
     End Sub
 

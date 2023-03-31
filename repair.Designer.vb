@@ -423,7 +423,7 @@ Partial Class repair
         '
         'Column2
         '
-        Me.Column2.HeaderText = "Item name"
+        Me.Column2.HeaderText = "Item no"
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
         Me.Column2.Width = 125
