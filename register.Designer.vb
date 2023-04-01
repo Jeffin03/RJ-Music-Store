@@ -23,8 +23,8 @@ Partial Class register
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(register))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -78,6 +78,7 @@ Partial Class register
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Deletebtn = New System.Windows.Forms.Button()
         Me.ItemDGV = New System.Windows.Forms.DataGridView()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
@@ -309,10 +310,10 @@ Partial Class register
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button11)
         Me.Panel1.Controls.Add(Me.Button12)
-        Me.Panel1.Location = New System.Drawing.Point(244, 0)
+        Me.Panel1.Location = New System.Drawing.Point(247, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1296, 54)
+        Me.Panel1.Size = New System.Drawing.Size(1293, 54)
         Me.Panel1.TabIndex = 1
         '
         'Button3
@@ -354,14 +355,14 @@ Partial Class register
         'BillDGV
         '
         Me.BillDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateBlue
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.InactiveBorder
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BillDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.SlateBlue
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.InactiveBorder
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BillDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.BillDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BillDGV.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
         Me.BillDGV.GridColor = System.Drawing.SystemColors.ActiveCaptionText
@@ -410,7 +411,7 @@ Partial Class register
         'icat
         '
         Me.icat.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.icat.Location = New System.Drawing.Point(399, 263)
+        Me.icat.Location = New System.Drawing.Point(429, 219)
         Me.icat.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.icat.Name = "icat"
         Me.icat.Size = New System.Drawing.Size(149, 34)
@@ -419,7 +420,7 @@ Partial Class register
         'cnametb
         '
         Me.cnametb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cnametb.Location = New System.Drawing.Point(145, 148)
+        Me.cnametb.Location = New System.Drawing.Point(145, 109)
         Me.cnametb.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cnametb.Name = "cnametb"
         Me.cnametb.Size = New System.Drawing.Size(196, 34)
@@ -428,7 +429,7 @@ Partial Class register
         'price
         '
         Me.price.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.price.Location = New System.Drawing.Point(602, 175)
+        Me.price.Location = New System.Drawing.Point(602, 131)
         Me.price.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.price.Name = "price"
         Me.price.Size = New System.Drawing.Size(110, 34)
@@ -438,7 +439,7 @@ Partial Class register
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(603, 223)
+        Me.Label9.Location = New System.Drawing.Point(603, 179)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(93, 27)
         Me.Label9.TabIndex = 5
@@ -447,17 +448,17 @@ Partial Class register
         'cadr
         '
         Me.cadr.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cadr.Location = New System.Drawing.Point(144, 265)
+        Me.cadr.Location = New System.Drawing.Point(137, 251)
         Me.cadr.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cadr.Name = "cadr"
-        Me.cadr.Size = New System.Drawing.Size(227, 34)
+        Me.cadr.Size = New System.Drawing.Size(234, 34)
         Me.cadr.TabIndex = 12
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(398, 223)
+        Me.Label8.Location = New System.Drawing.Point(428, 179)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(99, 27)
         Me.Label8.TabIndex = 4
@@ -467,7 +468,7 @@ Partial Class register
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(398, 146)
+        Me.Label6.Location = New System.Drawing.Point(428, 102)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(124, 27)
         Me.Label6.TabIndex = 3
@@ -477,7 +478,7 @@ Partial Class register
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(5, 269)
+        Me.Label5.Location = New System.Drawing.Point(5, 255)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(115, 27)
         Me.Label5.TabIndex = 5
@@ -486,7 +487,7 @@ Partial Class register
         'pname
         '
         Me.pname.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pname.Location = New System.Drawing.Point(403, 187)
+        Me.pname.Location = New System.Drawing.Point(433, 143)
         Me.pname.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pname.Name = "pname"
         Me.pname.Size = New System.Drawing.Size(119, 34)
@@ -495,7 +496,7 @@ Partial Class register
         'quan
         '
         Me.quan.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.quan.Location = New System.Drawing.Point(615, 263)
+        Me.quan.Location = New System.Drawing.Point(615, 219)
         Me.quan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.quan.Name = "quan"
         Me.quan.Size = New System.Drawing.Size(70, 34)
@@ -505,7 +506,7 @@ Partial Class register
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(5, 210)
+        Me.Label4.Location = New System.Drawing.Point(5, 161)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(98, 27)
         Me.Label4.TabIndex = 4
@@ -529,7 +530,7 @@ Partial Class register
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(597, 138)
+        Me.Label1.Location = New System.Drawing.Point(597, 94)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 27)
         Me.Label1.TabIndex = 18
@@ -539,7 +540,7 @@ Partial Class register
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(8, 148)
+        Me.Label3.Location = New System.Drawing.Point(8, 109)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(95, 27)
         Me.Label3.TabIndex = 3
@@ -562,18 +563,18 @@ Partial Class register
         'cnum
         '
         Me.cnum.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cnum.Location = New System.Drawing.Point(145, 206)
+        Me.cnum.Location = New System.Drawing.Point(133, 191)
         Me.cnum.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.cnum.MaxLength = 10
+        Me.cnum.MaxLength = 14
         Me.cnum.Name = "cnum"
-        Me.cnum.Size = New System.Drawing.Size(210, 34)
+        Me.cnum.Size = New System.Drawing.Size(215, 34)
         Me.cnum.TabIndex = 11
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(398, 62)
+        Me.Label11.Location = New System.Drawing.Point(431, 18)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(67, 27)
         Me.Label11.TabIndex = 124
@@ -582,7 +583,7 @@ Partial Class register
         'custid
         '
         Me.custid.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.custid.Location = New System.Drawing.Point(10, 81)
+        Me.custid.Location = New System.Drawing.Point(10, 49)
         Me.custid.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.custid.Name = "custid"
         Me.custid.Size = New System.Drawing.Size(128, 34)
@@ -592,7 +593,7 @@ Partial Class register
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(14, 49)
+        Me.Label7.Location = New System.Drawing.Point(14, 17)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(81, 27)
         Me.Label7.TabIndex = 13
@@ -601,7 +602,7 @@ Partial Class register
         'billtb
         '
         Me.billtb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.billtb.Location = New System.Drawing.Point(397, 93)
+        Me.billtb.Location = New System.Drawing.Point(430, 49)
         Me.billtb.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.billtb.Name = "billtb"
         Me.billtb.Size = New System.Drawing.Size(112, 34)
@@ -619,6 +620,7 @@ Partial Class register
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.ComboBox1)
         Me.GroupBox2.Controls.Add(Me.Deletebtn)
         Me.GroupBox2.Controls.Add(Me.billtb)
         Me.GroupBox2.Controls.Add(Me.Label7)
@@ -663,14 +665,14 @@ Partial Class register
         'ItemDGV
         '
         Me.ItemDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateBlue
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InactiveBorder
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ItemDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.SlateBlue
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.InactiveBorder
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ItemDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.ItemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ItemDGV.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ItemDGV.Location = New System.Drawing.Point(270, 525)
@@ -679,6 +681,16 @@ Partial Class register
         Me.ItemDGV.RowTemplate.Height = 24
         Me.ItemDGV.Size = New System.Drawing.Size(605, 384)
         Me.ItemDGV.TabIndex = 134
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"India(+91)", "USA(+1)", "UK(+44)", "France(+33)", "Japan(+81)"})
+        Me.ComboBox1.Location = New System.Drawing.Point(28, 195)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(101, 30)
+        Me.ComboBox1.TabIndex = 127
         '
         'register
         '
@@ -772,4 +784,5 @@ Partial Class register
     Friend WithEvents Button11 As Windows.Forms.Button
     Friend WithEvents Button12 As Windows.Forms.Button
     Friend WithEvents ItemDGV As Windows.Forms.DataGridView
+    Friend WithEvents ComboBox1 As Windows.Forms.ComboBox
 End Class
