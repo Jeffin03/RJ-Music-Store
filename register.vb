@@ -398,8 +398,8 @@ Public Class register
             End If
         ElseIf ComboBox1.SelectedIndex = 1 Then
                 cnum.Text = "+1-"
-            cnum.MaxLength = 14
-            If cnum.TextLength < 14 Then
+            cnum.MaxLength = 13
+            If cnum.TextLength < 13 Then
                 MsgBox("Enter a valid number")
             End If
         ElseIf ComboBox1.SelectedIndex = 2 Then
