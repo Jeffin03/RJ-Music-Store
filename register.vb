@@ -54,7 +54,7 @@ Public Class register
         e.Graphics.DrawString("Bill no: " & billtb.Text, f8, Brushes.Black, 8, 75)
         e.Graphics.DrawString("Bill date: " & DateTime.Now.ToString("dd/MM/yyyy"), f8, Brushes.Black, 0, 90)
         e.Graphics.DrawString("Customer Name: " & cnametb.Text, f8, Brushes.Black, centermargin - 80, 75)
-        e.Graphics.DrawString("Mob: " & cnum.Text, f8, Brushes.Black, centermargin - 26, 90)
+        e.Graphics.DrawString("Mob: " & cnum.Text, f8, Brushes.Black, centermargin - 80, 90)
         e.Graphics.DrawString("Address: " & cadr.Text, f8, Brushes.Black, rightmargin - 100, 75)
         e.Graphics.DrawString("Customer ID: " & custid.Text, f8, Brushes.Black, rightmargin - 119, 90)
         e.Graphics.DrawString(line, f8, Brushes.Black, 0, 100)
@@ -388,6 +388,41 @@ Public Class register
         pname.Text = ""
         price.Text = ""
     End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        If ComboBox1.SelectedIndex = 0 Then
+            cnum.Text = "+91-"
+            cnum.MaxLength = 14
+            If cnum.TextLength < 14 Then
+                MsgBox("Enter a valid number")
+            End If
+        ElseIf ComboBox1.SelectedIndex = 1 Then
+                cnum.Text = "+1-"
+            cnum.MaxLength = 14
+            If cnum.TextLength < 14 Then
+                MsgBox("Enter a valid number")
+            End If
+        ElseIf ComboBox1.SelectedIndex = 2 Then
+            cnum.Text = "+44-"
+            cnum.MaxLength = 14
+            If cnum.TextLength < 14 Then
+                MsgBox("Enter a valid number")
+            End If
+        ElseIf ComboBox1.SelectedIndex = 3 Then
+            cnum.Text = "+33-"
+            cnum.MaxLength = 13
+            If cnum.TextLength < 13 Then
+                MsgBox("Enter a valid number")
+            End If
+        Else
+            cnum.Text = "+81-"
+            cnum.MaxLength = 14
+            If cnum.TextLength < 14 Then
+                MsgBox("Enter a valid number")
+            End If
+        End If
+    End Sub
+
     Private Sub Clear_after_billing()
         BillDGV.Rows.Clear()
         cnametb.Text = ""
