@@ -11,6 +11,7 @@
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Me.Hide()
         Dim adlog = New adminlog
         adlog.Show()
 
