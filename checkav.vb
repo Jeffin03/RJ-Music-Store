@@ -115,4 +115,9 @@ Public Class Checkav
         Dim ufb = New User_FB
         ufb.Show()
     End Sub
+    Private Sub pcat_TextChanged(sender As Object, e As EventArgs) Handles pcat.TextChanged
+        If pcat.Text = "" Then
+            Displayitem()
+        End If
+    End Sub
 End Class
