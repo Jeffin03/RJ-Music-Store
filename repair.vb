@@ -93,12 +93,6 @@ Thank you and please visit again")
         lod.Show()
     End Sub
 
-    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs)
-        Me.Close()
-        End
-
-    End Sub
-
     Private Sub checkava_Click(sender As Object, e As EventArgs) Handles checkava.Click
         Me.Hide()
         Dim cava = New Checkav
@@ -119,12 +113,6 @@ Thank you and please visit again")
         itmcat.Text = ""
         ordnme.Text = ""
         cnum.Text = ""
-    End Sub
-
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs)
-        Dim ufb = New User_FB
-        ufb.Show()
-
     End Sub
 
     Private Sub repair_Load(sender As Object, e As EventArgs) Handles MyBase.Load
