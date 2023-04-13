@@ -55,6 +55,7 @@ Partial Class Splash
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
@@ -67,6 +68,7 @@ Partial Class Splash
         'lblpercent
         '
         Me.lblpercent.AutoSize = True
+        Me.lblpercent.BackColor = System.Drawing.Color.Transparent
         Me.lblpercent.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.lblpercent.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblpercent.ForeColor = System.Drawing.SystemColors.ButtonFace

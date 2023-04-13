@@ -48,10 +48,10 @@ Partial Class admin_stocks
         Me.clear = New System.Windows.Forms.Button()
         Me.save = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Delete = New System.Windows.Forms.Button()
         Me.Updatebtn = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.ItemDGV = New System.Windows.Forms.DataGridView()
-        Me.Delete = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -218,40 +218,44 @@ Partial Class admin_stocks
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(360, 33)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(114, 30)
+        Me.Label2.Size = New System.Drawing.Size(118, 31)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Category"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(825, 33)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(67, 30)
+        Me.Label4.Size = New System.Drawing.Size(71, 31)
         Me.Label4.TabIndex = 18
         Me.Label4.Text = "Price"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(636, 35)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(109, 30)
+        Me.Label6.Size = New System.Drawing.Size(116, 31)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Quantity"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(94, 35)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 30)
+        Me.Label1.Size = New System.Drawing.Size(90, 31)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Name "
         '
@@ -352,6 +356,20 @@ Partial Class admin_stocks
         Me.Panel4.Size = New System.Drawing.Size(703, 67)
         Me.Panel4.TabIndex = 0
         '
+        'Delete
+        '
+        Me.Delete.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(57, Byte), Integer))
+        Me.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Delete.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.Delete.Location = New System.Drawing.Point(541, 19)
+        Me.Delete.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Delete.Name = "Delete"
+        Me.Delete.Size = New System.Drawing.Size(145, 38)
+        Me.Delete.TabIndex = 126
+        Me.Delete.Text = "DELETE"
+        Me.Delete.UseVisualStyleBackColor = False
+        '
         'Updatebtn
         '
         Me.Updatebtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(57, Byte), Integer))
@@ -386,20 +404,6 @@ Partial Class admin_stocks
         Me.ItemDGV.RowTemplate.Height = 24
         Me.ItemDGV.Size = New System.Drawing.Size(1034, 346)
         Me.ItemDGV.TabIndex = 154
-        '
-        'Delete
-        '
-        Me.Delete.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(57, Byte), Integer))
-        Me.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Delete.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Delete.Location = New System.Drawing.Point(541, 19)
-        Me.Delete.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Delete.Name = "Delete"
-        Me.Delete.Size = New System.Drawing.Size(145, 38)
-        Me.Delete.TabIndex = 126
-        Me.Delete.Text = "DELETE"
-        Me.Delete.UseVisualStyleBackColor = False
         '
         'admin_stocks
         '

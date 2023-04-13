@@ -73,6 +73,7 @@ Partial Class MOP
         'upil
         '
         Me.upil.AutoSize = True
+        Me.upil.BackColor = System.Drawing.Color.Transparent
         Me.upil.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.upil.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.upil.Location = New System.Drawing.Point(25, 18)
@@ -123,6 +124,7 @@ Partial Class MOP
         'cvvl
         '
         Me.cvvl.AutoSize = True
+        Me.cvvl.BackColor = System.Drawing.Color.Transparent
         Me.cvvl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cvvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cvvl.Location = New System.Drawing.Point(215, 37)
@@ -134,6 +136,7 @@ Partial Class MOP
         'crdn
         '
         Me.crdn.AutoSize = True
+        Me.crdn.BackColor = System.Drawing.Color.Transparent
         Me.crdn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.crdn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.crdn.Location = New System.Drawing.Point(9, 6)
@@ -154,6 +157,7 @@ Partial Class MOP
         'expl
         '
         Me.expl.AutoSize = True
+        Me.expl.BackColor = System.Drawing.Color.Transparent
         Me.expl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.expl.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.expl.Location = New System.Drawing.Point(8, 37)

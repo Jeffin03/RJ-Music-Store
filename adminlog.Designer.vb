@@ -48,7 +48,7 @@ Partial Class adminlog
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(440, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(463, 447)
+        Me.Panel1.Size = New System.Drawing.Size(463, 457)
         Me.Panel1.TabIndex = 4
         '
         'Label4
