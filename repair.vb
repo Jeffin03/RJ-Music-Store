@@ -39,8 +39,6 @@ Public Class repair
 
     End Sub
 
-
-
     Private Sub addbtn_Click(sender As Object, e As EventArgs) Handles addbtn.Click
         If ordnme.Text = "" Or cnum.Text = "" Or itemno.Text = "" Or itemdes.Text = "" Or itmcat.Text = "" Then
             MsgBox("Missing Information")
