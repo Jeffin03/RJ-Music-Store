@@ -26,4 +26,8 @@ Public Class SMS
         Me.Close()
 
     End Sub
+
+    Private Sub SMS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
