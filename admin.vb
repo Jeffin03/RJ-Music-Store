@@ -21,9 +21,7 @@ Public Class admin
     End Sub
 
     Dim key = 0
-    Private Sub ItemDGV_CellMouseClick(sender As Object, e As Windows.Forms.DataGridViewCellMouseEventArgs)
 
-    End Sub
     Private Sub Sales_chart()
         Try
             con.open
