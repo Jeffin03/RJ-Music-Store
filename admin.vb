@@ -150,4 +150,8 @@ Public Class admin
     Private Sub ItemDGV_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
+
+    Private Sub Chart1_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

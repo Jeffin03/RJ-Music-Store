@@ -27,7 +27,6 @@ Partial Class admin
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
@@ -47,8 +46,8 @@ Partial Class admin
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.ItemDGV = New System.Windows.Forms.DataGridView()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -70,10 +69,6 @@ Partial Class admin
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(252, 876)
         Me.Panel2.TabIndex = 73
-        '
-        'Guna2GradientPanel1
-        '
-
         '
         'Button14
         '
@@ -192,7 +187,7 @@ Partial Class admin
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Mongolian Baiti", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label6.Location = New System.Drawing.Point(970, 453)
+        Me.Label6.Location = New System.Drawing.Point(957, 453)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(234, 30)
         Me.Label6.TabIndex = 128
@@ -278,41 +273,12 @@ Partial Class admin
         Me.ItemDGV.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.ItemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ItemDGV.GridColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ItemDGV.Location = New System.Drawing.Point(986, 493)
+        Me.ItemDGV.Location = New System.Drawing.Point(954, 493)
         Me.ItemDGV.Name = "ItemDGV"
         Me.ItemDGV.RowHeadersWidth = 51
         Me.ItemDGV.RowTemplate.Height = 24
-        Me.ItemDGV.Size = New System.Drawing.Size(511, 244)
+        Me.ItemDGV.Size = New System.Drawing.Size(543, 301)
         Me.ItemDGV.TabIndex = 135
-        '
-        'Chart1
-        '
-        Me.Chart1.BackColor = System.Drawing.Color.LightCyan
-        Me.Chart1.BackImage = "C:\Users\santhosh\Pictures\Screenshots\Screenshot 2023-03-28 005458.png"
-        Me.Chart1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(279, 493)
-        Me.Chart1.Name = "Chart1"
-        Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Range
-        Series1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series1.Legend = "Legend1"
-        Series1.Name = "Sales Rating"
-        Series1.ShadowColor = System.Drawing.Color.MediumSeaGreen
-        Series1.YValuesPerPoint = 2
-        Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(636, 244)
-        Me.Chart1.TabIndex = 136
-        Me.Chart1.Text = "Chart1"
-        Title1.Alignment = System.Drawing.ContentAlignment.MiddleLeft
-        Title1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Left
-        Title1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Title1.Name = "Sales (amount) in Rupees"
-        Me.Chart1.Titles.Add(Title1)
         '
         'Panel5
         '
@@ -322,14 +288,33 @@ Partial Class admin
         Me.Panel5.Size = New System.Drawing.Size(997, 10)
         Me.Panel5.TabIndex = 137
         '
+        'Chart1
+        '
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend1)
+        Me.Chart1.Location = New System.Drawing.Point(277, 493)
+        Me.Chart1.Name = "Chart1"
+        Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Range
+        Series1.Legend = "Legend1"
+        Series1.Name = "Sales Rating"
+        Series1.YValuesPerPoint = 2
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Size = New System.Drawing.Size(620, 301)
+        Me.Chart1.TabIndex = 154
+        Me.Chart1.Text = "Chart1"
+        '
         'admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1539, 843)
-        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Chart1)
+        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.ItemDGV)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
@@ -372,6 +357,6 @@ Partial Class admin
     Friend WithEvents Panel3 As Windows.Forms.Panel
     Friend WithEvents Panel4 As Windows.Forms.Panel
     Friend WithEvents ItemDGV As Windows.Forms.DataGridView
-    Friend WithEvents Chart1 As Windows.Forms.DataVisualization.Charting.Chart
     Friend WithEvents Panel5 As Windows.Forms.Panel
+    Friend WithEvents Chart1 As Windows.Forms.DataVisualization.Charting.Chart
 End Class
