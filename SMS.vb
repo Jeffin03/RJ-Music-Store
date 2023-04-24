@@ -1,4 +1,6 @@
-﻿Imports System.Net
+﻿'****************DISCLAIMER**********************
+'This page in not made functional for now due to it being incomplete. Thank you......!!!
+Imports System.Net
 Imports System.Web
 Imports System.Collections.Specialized
 Imports System.IO
