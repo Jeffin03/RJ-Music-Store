@@ -5,6 +5,11 @@ Public Class MOP
 
 
     Private Sub MOP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ComboBox1.Hide()
+        Visaimg.Hide()
+        Mastcrd.Hide()
+        Amrexp.Hide()
+        Discover.Hide()
 
         Hide()
         expdate.Format = DateTimePickerFormat.Custom
@@ -68,16 +73,78 @@ Public Class MOP
         Me.Close()
 
     End Sub
+    Dim Fill As New AutoCompleteStringCollection()
+    Private Sub autocomp()
+        Fill.AddRange({"okaxis",
+                                       "okhdfcbank",
+                                       "upi",
+                                       "kotak",
+                                       "ybl",
+                                       "paytm",
+                                       "icici",
+                                       "sbi",
+                                       "idfc",
+                                       "axisbank",
+                                       "barodampay",
+                                       "okicici"})
+        upitxt.AutoCompleteCustomSource = Fill
+    End Sub
 
     Private Sub upitxt_TextChanged(sender As Object, e As EventArgs) Handles upitxt.TextChanged
-        Dim upils As String = upitxt.Text
+        autocomp()
 
-        If upils.Contains("@") Then
-            upitxt.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-
-            upitxt.AutoCompleteSource = AutoCompleteSource.CustomSource
-
+        If upitxt.Text.EndsWith("@") Then
+            ComboBox1.Items.Clear()
+            For Each upiSuffix As String In Fill
+                ComboBox1.Items.Add(upitxt.Text + upiSuffix)
+            Next
+            If ComboBox1.Items.Count > 0 Then
+                ComboBox1.SelectedIndex = 0
+                ComboBox1.Visible = True
+            End If
+        Else
+            ComboBox1.Visible = False
         End If
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        upitxt.Text = ComboBox1.SelectedItem.ToString()
+        upitxt.SelectionStart = upitxt.Text.Length
+    End Sub
+
+    Private Sub crdtxt_TextChanged(sender As Object, e As EventArgs) Handles crdtxt.TextChanged
+        If crdtxt.Text.StartsWith("3") Or ("4") Or ("5") Or ("6") Then
+            Card_image()
+        End If
+
+    End Sub
+
+    Private Sub Card_image()
+        If crdtxt.Text.StartsWith("3") Then
+            Amrexp.Show()
+        ElseIf crdtxt.Text.StartsWith("4") Then
+            Visaimg.Show()
+        ElseIf crdtxt.Text.StartsWith("5") Then
+            Mastcrd.Show()
+        ElseIf crdtxt.Text.StartsWith("6") Then
+            Discover.Show()
+        Else
+
+            Visaimg.Hide()
+            Mastcrd.Hide()
+            Amrexp.Hide()
+            Discover.Hide()
+        End If
+
+    End Sub
+
+    Private Sub Card_Click(sender As Object, e As EventArgs) Handles Card.Click
+        upipanel.Hide()
+
+    End Sub
+
+    Private Sub UPI_Click(sender As Object, e As EventArgs) Handles UPI.Click
+        cardpanel.Hide()
 
     End Sub
 End Class
