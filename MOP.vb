@@ -5,6 +5,7 @@ Public Class MOP
 
 
     Private Sub MOP_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Hide()
         expdate.Format = DateTimePickerFormat.Custom
         expdate.CustomFormat = "MM/yy"
@@ -69,8 +70,14 @@ Public Class MOP
     End Sub
 
     Private Sub upitxt_TextChanged(sender As Object, e As EventArgs) Handles upitxt.TextChanged
-        If upitxt.Text = "@" Then
-            AutoCompleteSource.CustomSource.ToString()
+        Dim upils As String = upitxt.Text
+
+        If upils.Contains("@") Then
+            upitxt.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+
+            upitxt.AutoCompleteSource = AutoCompleteSource.CustomSource
+
         End If
+
     End Sub
 End Class

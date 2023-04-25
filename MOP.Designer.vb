@@ -84,9 +84,7 @@ Partial Class MOP
         '
         'upitxt
         '
-        Me.upitxt.AllowDrop = True
-        Me.upitxt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.upitxt.AutoCompleteCustomSource.AddRange(New String() {"okaxis", "okhdfc"})
+        Me.upitxt.AutoCompleteCustomSource.AddRange(New String() {"@okaxis", "@okhdfcbank", "@upi", "@kotak", "@ybl", "@paytm", "@icici", "@sbi", "@idfc", "@axisbank", "@barodampay", "@okicici"})
         Me.upitxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.upitxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.upitxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
