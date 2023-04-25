@@ -145,16 +145,22 @@ Public Class register
         adm.Show()
 
     End Sub
+    Dim Check = 0
 
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub check_ctrycd()
         If valid = 1 Then
             Ctrycdval()
 
-        ElseIf cnametb.Text = "" Or cnum.Text = "" Or cadr.Text = "" Or custid.Text = "" Then
+        End If
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+
+        If cnametb.Text = "" Or cnum.Text = "" Or cadr.Text = "" Or custid.Text = "" Then
 
             MsgBox("Enter Customer Details")
-
         Else
             Bill_Gen()
         End If
@@ -166,8 +172,6 @@ Public Class register
             PDD.Document = PD
             PDD.ShowDialog()
             Clear_after_billing()
-
-
 
         Else
             MsgBox("select mode of payment")
@@ -189,8 +193,6 @@ Public Class register
 
         End Try
     End Sub
-
-
 
     Private Sub Displayitem()
         con.open()
@@ -404,24 +406,28 @@ Public Class register
             cnum.MaxLength = 13
             If cnum.TextLength < 13 Then
                 valid = 1
+
             End If
         ElseIf ComboBox1.SelectedIndex = 2 Then
             cnum.Text = "+44-"
             cnum.MaxLength = 14
             If cnum.TextLength < 14 Then
                 valid = 1
+
             End If
         ElseIf ComboBox1.SelectedIndex = 3 Then
             cnum.Text = "+33-"
             cnum.MaxLength = 13
             If cnum.TextLength < 13 Then
                 valid = 1
+
             End If
         Else
             cnum.Text = "+81-"
             cnum.MaxLength = 14
             If cnum.TextLength < 14 Then
                 valid = 1
+
             End If
         End If
 
@@ -455,8 +461,8 @@ Public Class register
         End If
     End Sub
 
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
-
+    Private Sub cadr_MouseClick(sender As Object, e As MouseEventArgs) Handles cadr.MouseClick
+        check_ctrycd()
     End Sub
 
     Private Sub Clear_after_billing()
