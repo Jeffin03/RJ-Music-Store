@@ -148,8 +148,10 @@ Public Class register
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If valid = 1 Then
+            Ctrycdval()
 
-        If cnametb.Text = "" Or cnum.Text = "" Or cadr.Text = "" Or custid.Text = "" Then
+        ElseIf cnametb.Text = "" Or cnum.Text = "" Or cadr.Text = "" Or custid.Text = "" Then
 
             MsgBox("Enter Customer Details")
 
@@ -388,37 +390,67 @@ Public Class register
         pname.Text = ""
         price.Text = ""
     End Sub
+    Dim valid = 0
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         If ComboBox1.SelectedIndex = 0 Then
             cnum.Text = "+91-"
             cnum.MaxLength = 14
             If cnum.TextLength < 14 Then
-                MsgBox("Enter a valid number")
+                valid = 1
             End If
         ElseIf ComboBox1.SelectedIndex = 1 Then
-                cnum.Text = "+1-"
+            cnum.Text = "+1-"
             cnum.MaxLength = 13
             If cnum.TextLength < 13 Then
-                MsgBox("Enter a valid number")
+                valid = 1
             End If
         ElseIf ComboBox1.SelectedIndex = 2 Then
             cnum.Text = "+44-"
             cnum.MaxLength = 14
             If cnum.TextLength < 14 Then
-                MsgBox("Enter a valid number")
+                valid = 1
             End If
         ElseIf ComboBox1.SelectedIndex = 3 Then
             cnum.Text = "+33-"
             cnum.MaxLength = 13
             If cnum.TextLength < 13 Then
-                MsgBox("Enter a valid number")
+                valid = 1
             End If
         Else
             cnum.Text = "+81-"
             cnum.MaxLength = 14
             If cnum.TextLength < 14 Then
-                MsgBox("Enter a valid number")
+                valid = 1
+            End If
+        End If
+
+    End Sub
+    Private Sub Ctrycdval()
+        If ComboBox1.SelectedIndex = 0 Then
+
+            If cnum.TextLength < 14 Then
+                MsgBox("Enter 10 digits after country code")
+            End If
+        ElseIf ComboBox1.SelectedIndex = 1 Then
+
+            If cnum.TextLength < 13 Then
+                MsgBox("Enter 10 digits after country code")
+            End If
+        ElseIf ComboBox1.SelectedIndex = 2 Then
+
+            If cnum.TextLength < 14 Then
+                MsgBox("Enter 10 digits after country code")
+            End If
+        ElseIf ComboBox1.SelectedIndex = 3 Then
+
+            If cnum.TextLength < 13 Then
+                MsgBox("Enter 10 digits after country code")
+            End If
+        Else
+
+            If cnum.TextLength < 14 Then
+                MsgBox("Enter 10 digits after country code")
             End If
         End If
     End Sub

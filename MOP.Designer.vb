@@ -55,9 +55,9 @@ Partial Class MOP
         Me.Panel1.Controls.Add(Me.UPI)
         Me.Panel1.Controls.Add(Me.Card)
         Me.Panel1.Controls.Add(Me.Cash)
-        Me.Panel1.Location = New System.Drawing.Point(51, 130)
+        Me.Panel1.Location = New System.Drawing.Point(39, 130)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(457, 406)
+        Me.Panel1.Size = New System.Drawing.Size(469, 406)
         Me.Panel1.TabIndex = 0
         '
         'upipanel
@@ -65,9 +65,9 @@ Partial Class MOP
         Me.upipanel.BackgroundImage = CType(resources.GetObject("upipanel.BackgroundImage"), System.Drawing.Image)
         Me.upipanel.Controls.Add(Me.upil)
         Me.upipanel.Controls.Add(Me.upitxt)
-        Me.upipanel.Location = New System.Drawing.Point(53, 331)
+        Me.upipanel.Location = New System.Drawing.Point(52, 331)
         Me.upipanel.Name = "upipanel"
-        Me.upipanel.Size = New System.Drawing.Size(347, 58)
+        Me.upipanel.Size = New System.Drawing.Size(364, 58)
         Me.upipanel.TabIndex = 13
         '
         'upil
@@ -84,6 +84,9 @@ Partial Class MOP
         '
         'upitxt
         '
+        Me.upitxt.AutoCompleteCustomSource.AddRange(New String() {"okaxis", "okhdfc"})
+        Me.upitxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.upitxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.upitxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.upitxt.Location = New System.Drawing.Point(88, 16)
         Me.upitxt.Name = "upitxt"
@@ -99,15 +102,15 @@ Partial Class MOP
         Me.cardpanel.Controls.Add(Me.crdn)
         Me.cardpanel.Controls.Add(Me.cvv)
         Me.cardpanel.Controls.Add(Me.expl)
-        Me.cardpanel.Location = New System.Drawing.Point(53, 185)
+        Me.cardpanel.Location = New System.Drawing.Point(49, 185)
         Me.cardpanel.Name = "cardpanel"
-        Me.cardpanel.Size = New System.Drawing.Size(347, 67)
+        Me.cardpanel.Size = New System.Drawing.Size(367, 67)
         Me.cardpanel.TabIndex = 12
         '
         'expdate
         '
         Me.expdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.expdate.Location = New System.Drawing.Point(101, 39)
+        Me.expdate.Location = New System.Drawing.Point(110, 39)
         Me.expdate.Name = "expdate"
         Me.expdate.Size = New System.Drawing.Size(107, 22)
         Me.expdate.TabIndex = 8
@@ -115,7 +118,7 @@ Partial Class MOP
         'crdtxt
         '
         Me.crdtxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.crdtxt.Location = New System.Drawing.Point(101, 0)
+        Me.crdtxt.Location = New System.Drawing.Point(110, 0)
         Me.crdtxt.MaxLength = 14
         Me.crdtxt.Name = "crdtxt"
         Me.crdtxt.Size = New System.Drawing.Size(227, 27)
@@ -127,7 +130,7 @@ Partial Class MOP
         Me.cvvl.BackColor = System.Drawing.Color.Transparent
         Me.cvvl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cvvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cvvl.Location = New System.Drawing.Point(215, 37)
+        Me.cvvl.Location = New System.Drawing.Point(224, 37)
         Me.cvvl.Name = "cvvl"
         Me.cvvl.Size = New System.Drawing.Size(42, 25)
         Me.cvvl.TabIndex = 5
@@ -139,7 +142,7 @@ Partial Class MOP
         Me.crdn.BackColor = System.Drawing.Color.Transparent
         Me.crdn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.crdn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.crdn.Location = New System.Drawing.Point(9, 6)
+        Me.crdn.Location = New System.Drawing.Point(-2, 6)
         Me.crdn.Name = "crdn"
         Me.crdn.Size = New System.Drawing.Size(78, 20)
         Me.crdn.TabIndex = 6
@@ -148,7 +151,7 @@ Partial Class MOP
         'cvv
         '
         Me.cvv.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cvv.Location = New System.Drawing.Point(264, 36)
+        Me.cvv.Location = New System.Drawing.Point(273, 36)
         Me.cvv.MaxLength = 3
         Me.cvv.Name = "cvv"
         Me.cvv.Size = New System.Drawing.Size(64, 27)
@@ -160,7 +163,7 @@ Partial Class MOP
         Me.expl.BackColor = System.Drawing.Color.Transparent
         Me.expl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.expl.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.expl.Location = New System.Drawing.Point(8, 37)
+        Me.expl.Location = New System.Drawing.Point(-2, 37)
         Me.expl.Name = "expl"
         Me.expl.Size = New System.Drawing.Size(87, 25)
         Me.expl.TabIndex = 7
@@ -171,9 +174,9 @@ Partial Class MOP
         Me.UPI.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(57, Byte), Integer))
         Me.UPI.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UPI.ForeColor = System.Drawing.SystemColors.Control
-        Me.UPI.Location = New System.Drawing.Point(52, 269)
+        Me.UPI.Location = New System.Drawing.Point(49, 269)
         Me.UPI.Name = "UPI"
-        Me.UPI.Size = New System.Drawing.Size(350, 62)
+        Me.UPI.Size = New System.Drawing.Size(369, 62)
         Me.UPI.TabIndex = 2
         Me.UPI.Text = "UPI"
         Me.UPI.UseVisualStyleBackColor = False
@@ -183,9 +186,9 @@ Partial Class MOP
         Me.Card.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(57, Byte), Integer))
         Me.Card.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Card.ForeColor = System.Drawing.SystemColors.Control
-        Me.Card.Location = New System.Drawing.Point(52, 125)
+        Me.Card.Location = New System.Drawing.Point(49, 125)
         Me.Card.Name = "Card"
-        Me.Card.Size = New System.Drawing.Size(350, 62)
+        Me.Card.Size = New System.Drawing.Size(369, 62)
         Me.Card.TabIndex = 1
         Me.Card.Text = "Card"
         Me.Card.UseVisualStyleBackColor = False
@@ -195,9 +198,9 @@ Partial Class MOP
         Me.Cash.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(57, Byte), Integer))
         Me.Cash.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cash.ForeColor = System.Drawing.SystemColors.Control
-        Me.Cash.Location = New System.Drawing.Point(52, 20)
+        Me.Cash.Location = New System.Drawing.Point(49, 20)
         Me.Cash.Name = "Cash"
-        Me.Cash.Size = New System.Drawing.Size(350, 62)
+        Me.Cash.Size = New System.Drawing.Size(369, 62)
         Me.Cash.TabIndex = 0
         Me.Cash.Text = "Cash"
         Me.Cash.UseCompatibleTextRendering = True

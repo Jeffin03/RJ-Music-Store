@@ -72,5 +72,9 @@ Public Class MOP
 
     End Sub
 
-
+    Private Sub upitxt_TextChanged(sender As Object, e As EventArgs) Handles upitxt.TextChanged
+        If upitxt.Text = "@" Then
+            AutoCompleteSource.CustomSource.ToString()
+        End If
+    End Sub
 End Class
