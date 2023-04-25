@@ -8,10 +8,6 @@ Public Class MOP
         Hide()
         expdate.Format = DateTimePickerFormat.Custom
         expdate.CustomFormat = "MM/yy"
-
-
-
-
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs)

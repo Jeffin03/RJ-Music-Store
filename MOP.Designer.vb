@@ -84,6 +84,8 @@ Partial Class MOP
         '
         'upitxt
         '
+        Me.upitxt.AllowDrop = True
+        Me.upitxt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.upitxt.AutoCompleteCustomSource.AddRange(New String() {"okaxis", "okhdfc"})
         Me.upitxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.upitxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
