@@ -107,6 +107,7 @@ Thank you and please visit again")
         itmcat.Text = ""
         ordnme.Text = ""
         cnum.Text = ""
+        ComboBox1.Text = ""
     End Sub
 
     Private Sub repair_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -130,5 +131,98 @@ Thank you and please visit again")
         Me.Hide()
         Dim lod = New Start
         lod.Show()
+    End Sub
+
+    Dim valid = 0
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        ' Assigns the country code according to the country selected
+
+        If ComboBox1.SelectedIndex = 0 Then
+            cnum.Text = "+91-"
+            cnum.MaxLength = 14
+            If cnum.TextLength < 14 Then
+                valid = 1
+            End If
+        ElseIf ComboBox1.SelectedIndex = 1 Then
+            cnum.Text = "+1-"
+            cnum.MaxLength = 13
+            If cnum.TextLength < 13 Then
+                valid = 1
+
+            End If
+        ElseIf ComboBox1.SelectedIndex = 2 Then
+            cnum.Text = "+44-"
+            cnum.MaxLength = 14
+            If cnum.TextLength < 14 Then
+                valid = 1
+
+            End If
+        ElseIf ComboBox1.SelectedIndex = 3 Then
+            cnum.Text = "+33-"
+            cnum.MaxLength = 13
+            If cnum.TextLength < 13 Then
+                valid = 1
+
+            End If
+        Else
+            cnum.Text = "+81-"
+            cnum.MaxLength = 14
+            If cnum.TextLength < 14 Then
+                valid = 1
+
+            End If
+        End If
+
+    End Sub
+    Private Sub Ctrycdval() 'Used to validate the length of the phone number along with the country code
+        If ComboBox1.SelectedIndex = 0 Then
+
+            If cnum.TextLength < 14 Then
+                MsgBox("Enter 10 digits after country code")
+            End If
+        ElseIf ComboBox1.SelectedIndex = 1 Then
+
+            If cnum.TextLength < 13 Then
+                MsgBox("Enter 10 digits after country code")
+            End If
+        ElseIf ComboBox1.SelectedIndex = 2 Then
+
+            If cnum.TextLength < 14 Then
+                MsgBox("Enter 10 digits after country code")
+            End If
+        ElseIf ComboBox1.SelectedIndex = 3 Then
+
+            If cnum.TextLength < 13 Then
+                MsgBox("Enter 10 digits after country code")
+            End If
+        Else
+
+            If cnum.TextLength < 14 Then
+                MsgBox("Enter 10 digits after country code")
+            End If
+        End If
+    End Sub
+    Private Sub check_ctrycd() 'This is to help validate the length of the phone number along with its country code.
+        If valid = 1 Then
+            Ctrycdval()
+
+        End If
+
+    End Sub
+
+    Private Sub itemno_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles itemno.MouseClick 'checks the length of phone numbe when customer clicks on the next textbox
+        check_ctrycd()
+    End Sub
+
+    Private Sub itmcat_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles itmcat.MouseClick
+        check_ctrycd()
+    End Sub
+
+    Private Sub itemdes_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles itemdes.MouseClick
+        check_ctrycd()
+    End Sub
+
+    Private Sub ordnme_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles ordnme.MouseClick
+        check_ctrycd()
     End Sub
 End Class

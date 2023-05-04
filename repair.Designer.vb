@@ -52,6 +52,7 @@ Partial Class repair
         Me.logoutbtn = New System.Windows.Forms.Button()
         Me.closebtn = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ItemDGV = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -190,11 +191,11 @@ Partial Class repair
         'cnum
         '
         Me.cnum.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cnum.Location = New System.Drawing.Point(175, 85)
+        Me.cnum.Location = New System.Drawing.Point(250, 85)
         Me.cnum.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cnum.MaxLength = 10
         Me.cnum.Name = "cnum"
-        Me.cnum.Size = New System.Drawing.Size(345, 34)
+        Me.cnum.Size = New System.Drawing.Size(270, 34)
         Me.cnum.TabIndex = 37
         '
         'ordnme
@@ -385,6 +386,7 @@ Partial Class repair
         'Panel3
         '
         Me.Panel3.BackgroundImage = CType(resources.GetObject("Panel3.BackgroundImage"), System.Drawing.Image)
+        Me.Panel3.Controls.Add(Me.ComboBox1)
         Me.Panel3.Controls.Add(Me.ordnme)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Label1)
@@ -399,6 +401,16 @@ Partial Class repair
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1129, 221)
         Me.Panel3.TabIndex = 152
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"India", "USA", "UK", "France", "Japan"})
+        Me.ComboBox1.Location = New System.Drawing.Point(173, 85)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(81, 34)
+        Me.ComboBox1.TabIndex = 128
         '
         'ItemDGV
         '
@@ -509,4 +521,5 @@ Partial Class repair
     Friend WithEvents Column2 As Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column4 As Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ComboBox1 As Windows.Forms.ComboBox
 End Class

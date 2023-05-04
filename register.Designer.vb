@@ -652,7 +652,7 @@ Partial Class register
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"India(+91)", "USA(+1)", "UK(+44)", "France(+33)", "Japan(+81)"})
+        Me.ComboBox1.Items.AddRange(New Object() {"India", "USA", "UK", "France", "Japan"})
         Me.ComboBox1.Location = New System.Drawing.Point(28, 195)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(101, 30)
