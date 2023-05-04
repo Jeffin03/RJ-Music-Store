@@ -25,7 +25,7 @@ Public Class MOP
 
     End Sub
 
-    Private Sub Card_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles Card.MouseClick
+    Private Sub Card_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles Card.MouseClick 'shows the necessary textboxes when clicked on card button
         cardpanel.Show()
         crdtxt.Show()
         cvv.Show()
@@ -38,7 +38,7 @@ Public Class MOP
 
     End Sub
 
-    Private Overloads Sub Hide()
+    Private Overloads Sub Hide() 'used to hide specific tools in MOP page
         crdtxt.Hide()
         cvv.Hide()
         cvvl.Hide()
@@ -53,7 +53,7 @@ Public Class MOP
 
     End Sub
 
-    Private Sub UPI_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles UPI.MouseClick
+    Private Sub UPI_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles UPI.MouseClick 'Shows UPI related tools
         upipanel.Show()
         upil.Show()
         upitxt.Show()
@@ -74,7 +74,7 @@ Public Class MOP
 
     End Sub
     Dim Fill As New AutoCompleteStringCollection()
-    Private Sub autocomp()
+    Private Sub autocomp() 'An autocomplete function for the upi id textbox
         Fill.AddRange({"okaxis",
                                        "okhdfcbank",
                                        "upi",
@@ -90,7 +90,7 @@ Public Class MOP
         upitxt.AutoCompleteCustomSource = Fill
     End Sub
 
-    Private Sub upitxt_TextChanged(sender As Object, e As EventArgs) Handles upitxt.TextChanged
+    Private Sub upitxt_TextChanged(sender As Object, e As EventArgs) Handles upitxt.TextChanged 'Condition set to perform the autocompletion
         autocomp()
 
         If upitxt.Text.EndsWith("@") Then
@@ -112,14 +112,14 @@ Public Class MOP
         upitxt.SelectionStart = upitxt.Text.Length
     End Sub
 
-    Private Sub crdtxt_TextChanged(sender As Object, e As EventArgs) Handles crdtxt.TextChanged
+    Private Sub crdtxt_TextChanged(sender As Object, e As EventArgs) Handles crdtxt.TextChanged 'A small card type displaying feature
         If crdtxt.Text.StartsWith("3") Or ("4") Or ("5") Or ("6") Then
             Card_image()
         End If
 
     End Sub
 
-    Private Sub Card_image()
+    Private Sub Card_image() 'assigns the card pic to the card starting number
         If crdtxt.Text.StartsWith("3") Then
             Amrexp.Show()
         ElseIf crdtxt.Text.StartsWith("4") Then

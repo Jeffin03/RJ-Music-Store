@@ -5,7 +5,7 @@ Public Class admin_stocks
     Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
 
 
-    Private Sub save_Click(sender As Object, e As EventArgs) Handles save.Click
+    Private Sub save_Click(sender As Object, e As EventArgs) Handles save.Click 'adds new stock to product table
 
         Try
             con.Open()
@@ -21,7 +21,7 @@ Public Class admin_stocks
         End Try
     End Sub
 
-    Private Sub clear_Click(sender As Object, e As EventArgs) Handles clear.Click
+    Private Sub clear_Click(sender As Object, e As EventArgs) Handles clear.Click 'reset button
         pname.Text = ""
         pcat.Text = ""
         price.Text = ""
@@ -30,7 +30,7 @@ Public Class admin_stocks
 
     End Sub
 
-    Private Sub displayitem()
+    Private Sub displayitem() 'displays data in product table in a DataGridView
         con.open()
         Dim query = "select * from producttb"
         Dim cmd = New SqlCommand(query, con)
@@ -56,7 +56,7 @@ Public Class admin_stocks
 
     End Sub
 
-    Private Sub FilterByCat()
+    Private Sub FilterByCat() 'Filter by category
         con.open()
         Dim query = "select * from producttb where pcat = '" & pcat.SelectedItem.ToString() & " '"
         Dim cmd = New SqlCommand(query, con)
@@ -76,7 +76,7 @@ Public Class admin_stocks
 
     End Sub
 
-    Private Sub ItemDGV_CellMouseClick_1(sender As Object, e As DataGridViewCellMouseEventArgs) Handles ItemDGV.CellMouseClick
+    Private Sub ItemDGV_CellMouseClick_1(sender As Object, e As DataGridViewCellMouseEventArgs) Handles ItemDGV.CellMouseClick 'Fills the data from product table in the DataGridView
         Dim row As DataGridViewRow = ItemDGV.Rows(e.RowIndex)
         pname.Text = row.Cells(1).Value.ToString
         pcat.Text = row.Cells(2).Value.ToString
@@ -86,7 +86,7 @@ Public Class admin_stocks
             key = 0
         Else
             key = Convert.ToInt32(row.Cells(0).Value.ToString)
-            Stock = Convert.ToInt32(row.Cells(3).Value.ToString)
+            stock = Convert.ToInt32(row.Cells(3).Value.ToString)
         End If
 
     End Sub
@@ -144,7 +144,7 @@ Public Class admin_stocks
         Me.Close()
         End
     End Sub
-    Private Sub Updateitem()
+    Private Sub Updateitem() 'updated the value of quantity in the product table
         Dim newqty = stock + Convert.ToInt32(quan.Text)
         Try
             con.open
@@ -162,7 +162,7 @@ Public Class admin_stocks
         End Try
     End Sub
 
-    Private Sub Delete_Click(sender As Object, e As EventArgs) Handles Delete.Click
+    Private Sub Delete_Click(sender As Object, e As EventArgs) Handles Delete.Click 'deletes data from the product table
         If pname.Text = "" Or pcat.Text = "" Or quan.Text = "" Or price.Text = "" Then
             MsgBox("Select item to delete")
         Else

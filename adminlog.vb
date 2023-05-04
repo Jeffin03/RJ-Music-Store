@@ -1,7 +1,7 @@
 ﻿
 Public Class adminlog
 
-
+    'Login page for Admin
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If userid.Text = "admin" And password.Text = "password" Then
             Me.Hide()

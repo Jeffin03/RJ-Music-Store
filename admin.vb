@@ -5,7 +5,7 @@ Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class admin
     Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
-    Private Sub displayitem()
+    Private Sub displayitem() 'displays data from product table 
         con.open()
         Dim query = "select * from producttb"
         Dim cmd = New SqlCommand(query, con)
@@ -22,7 +22,7 @@ Public Class admin
 
     Dim key = 0
 
-    Private Sub Sales_chart()
+    Private Sub Sales_chart() 'This displays the sales chart as per data from sales table
         Try
             con.open
             Dim query As String
@@ -65,7 +65,7 @@ Public Class admin
         ItemDGV.Columns(4).Width = 75
 
     End Sub
-    Private Sub FilterByCat()
+    Private Sub FilterByCat() 'Filter by category 
         con.open()
         Dim query = "select * from producttb where pcat = '" & pcat.SelectedItem.ToString() & " '"
         Dim cmd = New SqlCommand(query, con)

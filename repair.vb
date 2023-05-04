@@ -1,8 +1,4 @@
 ﻿Imports System.Data.SqlClient
-Imports System.Web.UI
-Imports System.Windows.Controls
-Imports System.Windows.Forms
-Imports System.Windows.Input
 
 Public Class repair
     Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
@@ -39,7 +35,7 @@ Public Class repair
 
     End Sub
 
-    Private Sub addbtn_Click(sender As Object, e As EventArgs) Handles addbtn.Click
+    Private Sub addbtn_Click(sender As Object, e As EventArgs) Handles addbtn.Click 'Adds data to the repair table
         If ordnme.Text = "" Or cnum.Text = "" Or itemno.Text = "" Or itemdes.Text = "" Or itmcat.Text = "" Then
             MsgBox("Missing Information")
 
@@ -59,7 +55,7 @@ Public Class repair
         End If
     End Sub
     Dim i = 0
-    Private Sub addbtn_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles addbtn.MouseClick
+    Private Sub addbtn_MouseClick(sender As Object, e As Windows.Forms.MouseEventArgs) Handles addbtn.MouseClick 'adds data to ItemDGV
         If ordnme.Text = "" Or cnum.Text = "" Or itemno.Text = "" Or itemdes.Text = "" Or itmcat.Text = "" Then
             MsgBox("Missing Information")
 
@@ -76,7 +72,7 @@ Public Class repair
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click 'Shows a confirmation message of the order being placed
         MsgBox("Your Request has been accepted, we will update you on when the repairs are completed by SMS.
 Thank you and please visit again")
         Me.Hide()
@@ -97,7 +93,7 @@ Thank you and please visit again")
         cava.Show()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click 'To cancel an order
         MsgBox("Order Has been Canceled")
         Me.Hide()
         Dim hm = New Home
@@ -105,7 +101,7 @@ Thank you and please visit again")
 
     End Sub
 
-    Private Sub clrbtn_Click(sender As Object, e As EventArgs) Handles clrbtn.Click
+    Private Sub clrbtn_Click(sender As Object, e As EventArgs) Handles clrbtn.Click 'reset button
         itemdes.Text = ""
         itemno.Text = ""
         itmcat.Text = ""

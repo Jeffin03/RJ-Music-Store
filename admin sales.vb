@@ -5,7 +5,7 @@ Public Class admin_sales
 
     Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
 
-    Private Sub Sales_chart()
+    Private Sub Sales_chart() 'Formats a chart as per data from sales table
         Try
             con.open
             Dim query As String

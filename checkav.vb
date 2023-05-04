@@ -1,10 +1,8 @@
 ﻿Imports System.Data.SqlClient
-Imports System.Windows.Controls
-Imports System.Windows.Forms
 
 Public Class Checkav
     Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
-    Private Sub Displayitem()
+    Private Sub Displayitem() 'Display data from product table
         con.open()
         Dim query = "select * from producttb "
         Dim cmd = New SqlCommand(query, con)
@@ -20,7 +18,7 @@ Public Class Checkav
     End Sub
 
 
-    Private Sub Search()
+    Private Sub Search() 'This filters the data in ItemDGV to the words entered in the textbox
         con.open()
         Dim query = "select * from producttb with (nolock) where pname LIKE '%" & pronme.Text & "%'"
 
@@ -34,7 +32,7 @@ Public Class Checkav
         ItemDGV.DataSource = ds.Tables(0)
         con.close()
     End Sub
-    Private Sub FilterByCat()
+    Private Sub FilterByCat() 'This filters the data in ItemDGV as per category
         con.open()
         Dim query = "select * from producttb where pcat = '" & pcat.SelectedItem.ToString() & " '"
         Dim cmd = New SqlCommand(query, con)

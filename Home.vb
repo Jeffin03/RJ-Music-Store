@@ -1,4 +1,5 @@
 ﻿Public Class Home
+    'Contains code related to redirection to specified modules at Buttonclick
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
         Dim reg = New register
@@ -27,9 +28,7 @@
 
     End Sub
 
-    Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Hide()

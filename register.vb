@@ -14,7 +14,7 @@ Public Class register
     Dim WithEvents PD As New PrintDocument
     Dim PDD As New PrintPreviewDialog
     Dim longpaper As Integer
-    Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
+    Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True") 'Database connection
 
     Private Sub PD_BeginPrint(sender As Object, e As PrintEventArgs) Handles PD.BeginPrint
         Dim pagesetup As New PageSettings
@@ -23,7 +23,9 @@ Public Class register
 
     End Sub
 
-    Private Sub PD_printpage(sender As Object, e As PrintPageEventArgs) Handles PD.PrintPage
+
+    Private Sub PD_printpage(sender As Object, e As PrintPageEventArgs) Handles PD.PrintPage  'Code for the Print document
+        'Initializing the Fonts
         Dim f8 As New Font("Calibri", 8, FontStyle.Regular)
         Dim f8b As New Font("Calibri", 8, FontStyle.Bold)
         Dim f10 As New Font("Calibri", 10, FontStyle.Regular)
@@ -45,6 +47,7 @@ Public Class register
 
         Dim line As String
         line = "-----------------------------------------------------------------------------------------------------------------------------------"
+        'The content of the Document
         e.Graphics.DrawString("R&J Music Square ", f14b, Brushes.Black, 0, 5)
         e.Graphics.DrawString("Avalahalli,Bangalore-560049", f10, Brushes.Black, 0, 25)
         e.Graphics.DrawString("Tel +916364828608         Email:rjmusics.store@gmail.com", f8, Brushes.Black, 0, 40)
@@ -86,7 +89,7 @@ Public Class register
 
     End Sub
 
-    Private Sub Addbill()
+    Private Sub Addbill() 'Adds data to sales table
 
         Try
 
@@ -147,7 +150,7 @@ Public Class register
     End Sub
     Dim Check = 0
 
-    Private Sub check_ctrycd()
+    Private Sub check_ctrycd() 'This is to help validate the length of the phone number along with its country code.
         If valid = 1 Then
             Ctrycdval()
 
@@ -160,13 +163,14 @@ Public Class register
 
         If cnametb.Text = "" Or cnum.Text = "" Or cadr.Text = "" Or custid.Text = "" Then
 
-            MsgBox("Enter Customer Details")
+            MsgBox("Enter Customer Details") ' This helps make sure all the details are added.
         Else
             Bill_Gen()
         End If
     End Sub
-    Private Sub Bill_Gen()
-        If moprb.Checked = True Then
+
+    Private Sub Bill_Gen() ' The actions to be formed when user clicks on the print button like adding data, creating a bill, displaying the details,etc.
+        If moprb.Checked = True Then 'moprb is a checkbox that opens the Mode of Payment page.
             Addbill()
             addcust()
             PDD.Document = PD
@@ -174,12 +178,12 @@ Public Class register
             Clear_after_billing()
 
         Else
-            MsgBox("select mode of payment")
+            MsgBox("select mode of payment") ' If we have not accessed the MOP page, which means that moprb is not checked.
         End If
     End Sub
 
 
-    Private Sub addcust()
+    Private Sub addcust() 'adds data to customer table
         Try
             con.Open()
             Dim query = "insert into custtb values ('" & custid.Text & "','" & cnametb.Text & "','" & cnum.Text & "','" & cadr.Text & "')"
@@ -194,7 +198,7 @@ Public Class register
         End Try
     End Sub
 
-    Private Sub Displayitem()
+    Private Sub Displayitem() ' This is to display the data in Product table in the Data Grid View called ItemDGV
         con.open()
         Dim query = "select * from producttb"
         Dim cmd = New SqlCommand(query, con)
@@ -208,7 +212,7 @@ Public Class register
         con.close()
 
     End Sub
-    Private Sub FilterByCat()
+    Private Sub FilterByCat() 'This is to filter the items in ItemDGV
         con.open()
         Dim query = "select * from producttb where pcat = '" & pcat.SelectedItem.ToString() & " '"
         Dim cmd = New SqlCommand(query, con)
@@ -227,9 +231,10 @@ Public Class register
 
     End Sub
 
-    Dim Key = 0, Stock = 0
+    Dim Key = 0, Stock = 0 ' Quantity of a product is stored in Stock
     Dim cur_stock = 0
-    Private Sub Updateitem()
+
+    Private Sub Updateitem() ' This shows the updated item quantity in ItemDGV after  
         Dim newqty = Stock - Convert.ToInt32(quan.Text)
         Try
             con.open
@@ -247,7 +252,7 @@ Public Class register
         End Try
     End Sub
 
-    Private Sub Ifdeleted()
+    Private Sub Ifdeleted() 'This updates the quantity in the product table if the item is removed from the BillDGV
 
         Dim newqty = Stock - Convert.ToInt32(quan.Text)
         Dim curqty = newqty + Convert.ToInt32(quan.Text)
@@ -279,7 +284,7 @@ Public Class register
 
     End Sub
 
-    Private Sub clear_Click(sender As Object, e As EventArgs) Handles clear.Click
+    Private Sub clear_Click(sender As Object, e As EventArgs) Handles clear.Click ' Clears the data entered in the textboxes.
         cnametb.Text = ""
         cnum.Text = ""
         cadr.Text = ""
@@ -301,7 +306,8 @@ Public Class register
         mop.Show()
     End Sub
 
-    Private Sub Addtocart_Click(sender As Object, e As EventArgs) Handles Addtocart.Click
+    Private Sub Addtocart_Click(sender As Object, e As EventArgs) Handles Addtocart.Click 'Adds data to BillDGV (Data Grid View for the bill)
+
         If quan.Text = "" Then
             quan.Text = 1
         End If
@@ -336,7 +342,8 @@ Public Class register
     End Sub
 
 
-    Private Sub Deletebtn_Click(sender As Object, e As EventArgs) Handles Deletebtn.Click
+    Private Sub Deletebtn_Click(sender As Object, e As EventArgs) Handles Deletebtn.Click 'Deletes selected item from BillDGV
+
         If Key = 0 Then
             MsgBox("select item to delete")
         Else
@@ -364,7 +371,7 @@ Public Class register
         End
     End Sub
 
-    Private Sub ItemDGV_CellMouseClick_1(sender As Object, e As DataGridViewCellMouseEventArgs) Handles ItemDGV.CellMouseClick
+    Private Sub ItemDGV_CellMouseClick_1(sender As Object, e As DataGridViewCellMouseEventArgs) Handles ItemDGV.CellMouseClick 'Data is filled in ItemDGV
         Dim row As DataGridViewRow = ItemDGV.Rows(e.RowIndex)
         pname.Text = row.Cells(1).Value.ToString
         icat.Text = row.Cells(2).Value.ToString
@@ -379,7 +386,7 @@ Public Class register
         End If
     End Sub
 
-    Private Sub BillDGV_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles BillDGV.CellMouseClick
+    Private Sub BillDGV_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles BillDGV.CellMouseClick 'Data is filled in BillDGV
         Dim row As DataGridViewRow = BillDGV.Rows(e.RowIndex)
         pname.Text = row.Cells(1).Value.ToString
         price.Text = row.Cells(4).Value.ToString
@@ -387,7 +394,7 @@ Public Class register
 
     End Sub
 
-    Private Sub Resetpdt()
+    Private Sub Resetpdt() 'Reset the textboxes to default 
         icat.Text = ""
         pname.Text = ""
         price.Text = ""
@@ -395,6 +402,8 @@ Public Class register
     Dim valid = 0
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        ' Assigns the country code according to the country selected
+
         If ComboBox1.SelectedIndex = 0 Then
             cnum.Text = "+91-"
             cnum.MaxLength = 14
@@ -432,7 +441,7 @@ Public Class register
         End If
 
     End Sub
-    Private Sub Ctrycdval()
+    Private Sub Ctrycdval() 'Used to validate the length of the phone number along with the country code
         If ComboBox1.SelectedIndex = 0 Then
 
             If cnum.TextLength < 14 Then
@@ -465,7 +474,7 @@ Public Class register
         check_ctrycd()
     End Sub
 
-    Private Sub Clear_after_billing()
+    Private Sub Clear_after_billing() 'Reset the contents in Register page to default
         BillDGV.Rows.Clear()
         cnametb.Text = ""
         cnum.Text = ""

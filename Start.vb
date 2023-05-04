@@ -1,6 +1,7 @@
-﻿Public Class Start
+﻿'This is the login page for normal users
+Public Class Start
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If TextBox1.Text = "rjmusic" And TextBox2.Text = "456987" Then
+        If TextBox1.Text = "rjmusic" And TextBox2.Text = "456987" Then ' username = rjmusic, password = 456987
             Me.Hide()
             Dim hm = New Home
             hm.Show()
