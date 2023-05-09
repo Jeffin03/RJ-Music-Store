@@ -41,7 +41,7 @@ A Standalone desktop application that aims to help assist in organising the stoc
 ![Alt text](img/Screenshot%202023-05-09%20012025.png)
 
 # **Note**
-*  This project is Not suitable for `commercial/real world` use, it is only for `Educational and Learning purposes` and can be used as 'reference material' for School or College projects
+*  This project is Not suitable for `commercial/real world` use, it is only for `Educational and Learning purposes` and can be used as 'reference material' for School or College projects.
 
 
 
