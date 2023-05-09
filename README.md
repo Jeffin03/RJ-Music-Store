@@ -43,6 +43,3 @@ A Standalone desktop application that aims to help assist in organising the stoc
 # **Note**
 
 *  This project is Not suitable for `commercial/real world` use, it is only for `Educational and Learning purposes` and can be used as `reference material` for School or College projects.
-
-
-
