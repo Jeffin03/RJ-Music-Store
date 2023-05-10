@@ -36,9 +36,10 @@ A Standalone desktop application that aims to help assist in organising the stoc
 
 ![Alt text](img/Picture9.png)
 
-![Alt text](img/pic10.png)
+<img src = img/pic10.png alt = "" height = "300" width = "610" >
 
-![Alt text](img/Screenshot%202023-05-09%20012025.png)
+
+<img src = img/Screenshot%202023-05-09%20012025.png alt = "" height = "300" width = "610" >
 
 # **Note**
 
