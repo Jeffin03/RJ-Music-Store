@@ -47,6 +47,6 @@ A Standalone desktop application that aims to help assist in organising the stoc
 
 * Raise an issue for queries, or when you face any issue.
 
-* The databases schemas are present in the Databases folder. [Click here to navigate to the folder](Databases).
+* The Database schemas are present in the Databases folder. [Click here to navigate to the folder](Databases).
 
-                    Have Fun Coding 🙂✌️
+#  **<div align = center>  Have Fun Coding 🙂✌️</div>**
