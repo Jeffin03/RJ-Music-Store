@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class repair
-    Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
+    Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmusicdb;Integrated Security=True")
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Me.Hide()

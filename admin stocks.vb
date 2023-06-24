@@ -2,7 +2,7 @@
 Imports System.Windows.Forms
 
 Public Class admin_stocks
-    Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
+    Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmusicdb;Integrated Security=True")
 
 
     Private Sub save_Click(sender As Object, e As EventArgs) Handles save.Click 'adds new stock to product table

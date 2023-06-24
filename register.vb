@@ -14,7 +14,7 @@ Public Class register
     Dim WithEvents PD As New PrintDocument
     Dim PDD As New PrintPreviewDialog
     Dim longpaper As Integer
-    Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True") 'Database connection
+    Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmusicdb;Integrated Security=True") 'Database connection
 
     Private Sub PD_BeginPrint(sender As Object, e As PrintEventArgs) Handles PD.BeginPrint
         Dim pagesetup As New PageSettings
@@ -54,12 +54,11 @@ Public Class register
         e.Graphics.DrawString(line, f8, Brushes.Black, 0, 50)
         e.Graphics.DrawString("TAX INVOICE", f8b, Brushes.Black, centermargin - 35, 58)
         e.Graphics.DrawString(line, f8, Brushes.Black, 0, 64)
-        e.Graphics.DrawString("Bill no: " & billtb.Text, f8, Brushes.Black, 8, 75)
         e.Graphics.DrawString("Bill date: " & DateTime.Now.ToString("dd/MM/yyyy"), f8, Brushes.Black, 0, 90)
-        e.Graphics.DrawString("Customer Name: " & cnametb.Text, f8, Brushes.Black, centermargin - 80, 75)
-        e.Graphics.DrawString("Mob: " & cnum.Text, f8, Brushes.Black, centermargin - 80, 90)
-        e.Graphics.DrawString("Address: " & cadr.Text, f8, Brushes.Black, rightmargin - 100, 75)
-        e.Graphics.DrawString("Customer ID: " & custid.Text, f8, Brushes.Black, rightmargin - 119, 90)
+        e.Graphics.DrawString("Customer Name: " & cnametb.Text, f8, Brushes.Black, 0, 75)
+        e.Graphics.DrawString("Mob: " & cnum.Text, f8, Brushes.Black, centermargin - 30, 90)
+        e.Graphics.DrawString("Address: " & cadr.Text, f8, Brushes.Black, centermargin - 30, 75)
+
         e.Graphics.DrawString(line, f8, Brushes.Black, 0, 100)
         e.Graphics.DrawString("SL.no", f9b, Brushes.Black, 0, 109)
         e.Graphics.DrawString("Name", f9b, Brushes.Black, 50, 109)
@@ -94,7 +93,7 @@ Public Class register
         Try
 
             con.Open()
-            Dim query = "insert into salestb values('" & billtb.Text & "' ,'" & cnametb.Text & " '," & GrdTotal & ",'" & DateTime.Now.ToLongDateString & "')"
+            Dim query = "insert into salestb values('" & cnametb.Text & " '," & GrdTotal & ",'" & DateTime.Now.ToLongDateString & "')"
             Dim cmd As SqlCommand
             cmd = New SqlCommand(query, con)
             cmd.ExecuteNonQuery()
@@ -161,7 +160,7 @@ Public Class register
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
 
-        If cnametb.Text = "" Or cnum.Text = "" Or cadr.Text = "" Or custid.Text = "" Then
+        If cnametb.Text = "" Or cnum.Text = "" Or cadr.Text = "" Then
 
             MsgBox("Enter Customer Details") ' This helps make sure all the details are added.
         Else
@@ -186,7 +185,7 @@ Public Class register
     Private Sub addcust() 'adds data to customer table
         Try
             con.Open()
-            Dim query = "insert into custtb values ('" & custid.Text & "','" & cnametb.Text & "','" & cnum.Text & "','" & cadr.Text & "')"
+            Dim query = "insert into custtb values ('" & cnametb.Text & "','" & cnum.Text & "','" & cadr.Text & "')"
 
             Dim cmd As SqlCommand
             cmd = New SqlCommand(query, con)
@@ -278,18 +277,10 @@ Public Class register
 
     End Sub
 
-    Private Sub sndsms_Click(sender As Object, e As EventArgs) Handles sndsms.Click
-        Dim sms = New SMS
-        sms.Show()
-
-    End Sub
-
     Private Sub clear_Click(sender As Object, e As EventArgs) Handles clear.Click ' Clears the data entered in the textboxes.
         cnametb.Text = ""
         cnum.Text = ""
         cadr.Text = ""
-        custid.Text = ""
-        billtb.Text = ""
         icat.Text = ""
         pname.Text = ""
 
@@ -299,11 +290,23 @@ Public Class register
 
     End Sub
 
+    Private Sub autofill()
+        con.open
+        Dim query = "select custid from custtb where cname = '" & cnametb.Text & " '"
+        Dim cmd As SqlCommand
+        cmd = New SqlCommand(query, con)
+        cmd.ExecuteNonQuery()
+        con.close()
+
+    End Sub
+
 
 
     Private Sub moprb_CheckedChanged(sender As Object, e As EventArgs) Handles moprb.CheckedChanged
         Dim mop As New MOP
         mop.Show()
+
+
     End Sub
 
     Private Sub Addtocart_Click(sender As Object, e As EventArgs) Handles Addtocart.Click 'Adds data to BillDGV (Data Grid View for the bill)
@@ -479,8 +482,6 @@ Public Class register
         cnametb.Text = ""
         cnum.Text = ""
         cadr.Text = ""
-        custid.Text = ""
-        billtb.Text = ""
         icat.Text = ""
         pname.Text = ""
         price.Text = ""
@@ -489,7 +490,7 @@ Public Class register
 
     Private Sub register_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Displayitem()
-        sndsms.Hide()
+
 
 
 

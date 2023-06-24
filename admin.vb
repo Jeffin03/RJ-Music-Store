@@ -4,7 +4,7 @@ Imports System.Windows.Forms
 Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class admin
-    Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmstoredb;Integrated Security=True")
+    Dim con = New SqlConnection("Data Source=LAPTOP-E350127R;Initial Catalog=rjmusicdb;Integrated Security=True")
     Private Sub displayitem() 'displays data from product table 
         con.open()
         Dim query = "select * from producttb"

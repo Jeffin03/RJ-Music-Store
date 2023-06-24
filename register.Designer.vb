@@ -39,7 +39,6 @@ Partial Class register
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.totallb = New System.Windows.Forms.Label()
-        Me.sndsms = New System.Windows.Forms.Button()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.moprb = New System.Windows.Forms.RadioButton()
@@ -70,10 +69,6 @@ Partial Class register
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Addtocart = New System.Windows.Forms.Button()
         Me.cnum = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.custid = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.billtb = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -263,20 +258,6 @@ Partial Class register
         Me.totallb.Name = "totallb"
         Me.totallb.Size = New System.Drawing.Size(0, 39)
         Me.totallb.TabIndex = 130
-        '
-        'sndsms
-        '
-        Me.sndsms.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(34, Byte), Integer), CType(CType(57, Byte), Integer))
-        Me.sndsms.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.sndsms.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.sndsms.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.sndsms.Location = New System.Drawing.Point(1198, 710)
-        Me.sndsms.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.sndsms.Name = "sndsms"
-        Me.sndsms.Size = New System.Drawing.Size(223, 58)
-        Me.sndsms.TabIndex = 131
-        Me.sndsms.Text = "Send Bill"
-        Me.sndsms.UseVisualStyleBackColor = False
         '
         'PrintPreviewDialog1
         '
@@ -570,44 +551,6 @@ Partial Class register
         Me.cnum.Size = New System.Drawing.Size(215, 34)
         Me.cnum.TabIndex = 11
         '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(431, 18)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(67, 27)
-        Me.Label11.TabIndex = 124
-        Me.Label11.Text = "Bill ID"
-        '
-        'custid
-        '
-        Me.custid.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.custid.Location = New System.Drawing.Point(10, 49)
-        Me.custid.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.custid.Name = "custid"
-        Me.custid.Size = New System.Drawing.Size(128, 34)
-        Me.custid.TabIndex = 14
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(14, 17)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(81, 27)
-        Me.Label7.TabIndex = 13
-        Me.Label7.Text = "C_ID : -"
-        '
-        'billtb
-        '
-        Me.billtb.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.billtb.Location = New System.Drawing.Point(430, 49)
-        Me.billtb.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.billtb.Name = "billtb"
-        Me.billtb.Size = New System.Drawing.Size(112, 34)
-        Me.billtb.TabIndex = 125
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
@@ -622,10 +565,6 @@ Partial Class register
         '
         Me.GroupBox2.Controls.Add(Me.ComboBox1)
         Me.GroupBox2.Controls.Add(Me.Deletebtn)
-        Me.GroupBox2.Controls.Add(Me.billtb)
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.custid)
-        Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.cnum)
         Me.GroupBox2.Controls.Add(Me.Addtocart)
         Me.GroupBox2.Controls.Add(Me.Label3)
@@ -703,7 +642,6 @@ Partial Class register
         Me.Controls.Add(Me.BillDGV)
         Me.Controls.Add(Me.bdatepd)
         Me.Controls.Add(Me.moprb)
-        Me.Controls.Add(Me.sndsms)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.totallb)
         Me.Controls.Add(Me.Panel3)
@@ -743,7 +681,6 @@ Partial Class register
     Friend WithEvents Button5 As Windows.Forms.Button
     Friend WithEvents totallb As Windows.Forms.Label
     Friend WithEvents billid As Windows.Forms.TextBox
-    Friend WithEvents sndsms As Windows.Forms.Button
     Friend WithEvents PrintDocument1 As Drawing.Printing.PrintDocument
     Friend WithEvents PrintPreviewDialog1 As Windows.Forms.PrintPreviewDialog
     Friend WithEvents moprb As Windows.Forms.RadioButton
@@ -773,10 +710,6 @@ Partial Class register
     Friend WithEvents Label3 As Windows.Forms.Label
     Friend WithEvents Addtocart As Windows.Forms.Button
     Friend WithEvents cnum As Windows.Forms.TextBox
-    Friend WithEvents Label11 As Windows.Forms.Label
-    Friend WithEvents custid As Windows.Forms.TextBox
-    Friend WithEvents Label7 As Windows.Forms.Label
-    Friend WithEvents billtb As Windows.Forms.TextBox
     Friend WithEvents GroupBox1 As Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As Windows.Forms.GroupBox
     Friend WithEvents Deletebtn As Windows.Forms.Button

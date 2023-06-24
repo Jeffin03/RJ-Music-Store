@@ -7,7 +7,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0169770E-A679-452C-A083-3D5CFA9F9900}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>RJ_Music_Store.MOP</StartupObject>
+    <StartupObject>RJ_Music_Store.admin_sales</StartupObject>
     <RootNamespace>RJ_Music_Store</RootNamespace>
     <AssemblyName>RJ Music Store</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -177,12 +177,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SMS.Designer.vb">
-      <DependentUpon>SMS.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SMS.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Splash.Designer.vb">
       <DependentUpon>Splash.vb</DependentUpon>
     </Compile>
@@ -236,9 +230,6 @@
     <EmbeddedResource Include="repair.resx">
       <DependentUpon>repair.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SMS.resx">
-      <DependentUpon>SMS.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
     </EmbeddedResource>
@@ -250,7 +241,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="email.py" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
