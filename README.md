@@ -43,10 +43,6 @@ A Standalone desktop application that aims to help assist in organising the stoc
 
 * This project is *not* suitable for `commercial/real world` use, it is only for `Educational and Learning purposes` and can be used as `reference material` for School or College projects.
 
-* Feel free to contribute to this project
-
-* Raise an issue for queries, or when you face any issue.
-
 * The Database schemas are present in the Databases folder. [Click here to navigate to the folder](Databases).
 #
 
